@@ -208,8 +208,13 @@ virginradio = MediasetChannel('EW', 'Virgin Radio')
 radiomontecarlo = MediasetChannel('BB', 'Radio Monte Carlo')
 
 
+# La7
+la7 = La7()
+
+
 # Paramount Channel
 paramount = ParamountChannel()
+
 
 if __name__ == '__main__':
     m3u = M3U('iptv-italy.m3u')
@@ -219,6 +224,7 @@ if __name__ == '__main__':
     m3u.addChannel(rete4)
     m3u.addChannel(canale5)
     m3u.addChannel(italia1)
+    m3u.addChannel(la7)
     m3u.addChannel(rai4)
     m3u.addChannel(rai5)
     m3u.addChannel(raimovie)
