@@ -71,8 +71,53 @@ class RaiChannel(Channel):
         self.name = self.chJson['channel']
 
 
+class MediasetChannel(Channel):
+    """
+    Abstraction for a Mediaset channel.
+    """
+    def __init__(self, id, name):
+        """
+        Initialize the Mediaset streaming channel and load playlist.
+
+        Arguments:
+            id (string) : identifier of the channel (e.g. 'C5')
+        """
+        super().__init__()
+        self.name = name
+        self.jsonUrl = 'https://static3.mediasetplay.mediaset.it/apigw/nownext/{}.json'.format(id)
+
+        # Get channel JSON
+        jsonReq = req.get(self.jsonUrl)
+        if not jsonReq.ok:
+            raise Exception('connection error {}'.format(jsonReq.status_code))
+        self.chJson = json.loads(jsonReq.text)
+
+        # Get playlists URL
+        if 'response' not in self.chJson.keys():
+            raise Exception('Cannot retrieve channel M3U!')
+        elif 'tuningInstruction' not in self.chJson['response'].keys():
+            raise Exception('Cannot retrieve channel M3U!')
+        elif 'urn:theplatform:tv:location:any' not in self.chJson['response']['tuningInstruction'].keys():
+            raise Exception('Cannot retrieve channel M3U!')
+        tuning_data = self.chJson['response']['tuningInstruction']['urn:theplatform:tv:location:any']
+        for tuning_datum in tuning_data:
+            if tuning_datum['format'] == 'application/x-mpegURL':
+                self.chUrl = tuning_datum['publicUrls'][0]
+                break
+        else:
+            raise Exception('Cannot retrieve channel M3U!')
+
 class M3U:
+    """
+    Creates a M3U playlist with all the required channels.
+    """
     def __init__(self, filepath, logos_url=None):
+        """
+        Arguments:
+            filepath (string) : path of the M3U file to dump
+            logos_url (string): URL of the directory containing all
+                                the channels logos (optional)
+        """
         self.filepath = filepath
         if os.path.isdir(self.filepath):
             raise IsADirectoryError("'{}' exists and is a directory.".format(self.filepath))
@@ -115,22 +160,60 @@ raisport = RaiChannel('raisport')
 raiscuola = RaiChannel('raiscuola')
 rairadio2 = RaiChannel('rairadio2')
 
+# Mediaset Channels
+rete4 = MediasetChannel('R4', 'Rete 4')
+canale5 = MediasetChannel('C5', 'Canale 5')
+italia1 = MediasetChannel('I1', 'Italia 1')
+canale20 = MediasetChannel('LB', 'Canale 20')
+la5 = MediasetChannel('KA', 'La5')
+italia2 = MediasetChannel('I2', 'Italia 2')
+cine34 = MediasetChannel('B6', 'Cine 34')
+medextra = MediasetChannel('KQ', 'Mediaset Extra')
+focus = MediasetChannel('FU', 'Focus')
+topcrime = MediasetChannel('LT', 'Top Crime')
+iris = MediasetChannel('KI', 'Iris')
+boing = MediasetChannel('KB', 'Boing')
+cartoonito = MediasetChannel('LA', 'Cartoonito')
+tgcom24 = MediasetChannel('KF', 'TGcom24')
+radio105 = MediasetChannel('EC', 'Radio 105')
+radio101 = MediasetChannel('ER', 'Radio 101')
+virginradio = MediasetChannel('EW', 'Virgin Radio')
+radiomontecarlo = MediasetChannel('BB', 'Radio Monte Carlo')
+
 
 if __name__ == '__main__':
     m3u = M3U('iptv-italy.m3u')
     m3u.addChannel(rai1)
     m3u.addChannel(rai2)
     m3u.addChannel(rai3)
+    m3u.addChannel(rete4)
+    m3u.addChannel(canale5)
+    m3u.addChannel(italia1)
     m3u.addChannel(rai4)
     m3u.addChannel(rai5)
     m3u.addChannel(raimovie)
+    m3u.addChannel(la5)
+    m3u.addChannel(italia2)
+    m3u.addChannel(topcrime)
+    m3u.addChannel(iris)
+    m3u.addChannel(focus)
+    m3u.addChannel(medextra)
+    m3u.addChannel(canale20)
     m3u.addChannel(raipremium)
     m3u.addChannel(raistoria)
     m3u.addChannel(raiyoyo)
     m3u.addChannel(raigulp)
+    m3u.addChannel(boing)
+    m3u.addChannel(cartoonito)
+    m3u.addChannel(cine34)
     m3u.addChannel(rainews24)
+    m3u.addChannel(tgcom24)
     m3u.addChannel(raisportpiuhd)
     m3u.addChannel(raisport)
     m3u.addChannel(raiscuola)
     m3u.addChannel(rairadio2)
+    m3u.addChannel(radio101)
+    m3u.addChannel(radio105)
+    m3u.addChannel(virginradio)
+    m3u.addChannel(radiomontecarlo)
     m3u.dump()
