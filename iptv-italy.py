@@ -134,6 +134,19 @@ class La7(Channel):
         self.chUrl = 'https://d15umi5iaezxgx.cloudfront.net/LA7/DRM/HLS/Live.m3u8'
 
 
+class La7d(Channel):
+    """
+    Abstraction for a La7d channel.
+    """
+    def __init__(self):
+        """
+        Initialize the La7d streaming channel and load playlist.
+        """
+        super().__init__()
+        self.name = 'La7d'
+        self.chUrl = 'https://d15umi5iaezxgx.cloudfront.net/LA7D/DRM/HLS/Live.m3u8'
+
+
 class M3U:
     """
     Creates a M3U playlist with all the required channels.
@@ -210,6 +223,7 @@ radiomontecarlo = MediasetChannel('BB', 'Radio Monte Carlo')
 
 # La7
 la7 = La7()
+la7d = La7d()
 
 
 # Paramount Channel
@@ -224,7 +238,7 @@ if __name__ == '__main__':
     m3u.addChannel(rete4)
     m3u.addChannel(canale5)
     m3u.addChannel(italia1)
-    m3u.addChannel(la7)
+    #m3u.addChannel(la7)
     m3u.addChannel(rai4)
     m3u.addChannel(rai5)
     m3u.addChannel(raimovie)
@@ -243,6 +257,7 @@ if __name__ == '__main__':
     m3u.addChannel(cartoonito)
     m3u.addChannel(cine34)
     m3u.addChannel(paramount)
+    #m3u.addChannel(la7d)
     m3u.addChannel(rainews24)
     m3u.addChannel(tgcom24)
     m3u.addChannel(raisportpiuhd)
