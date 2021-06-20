@@ -107,6 +107,33 @@ class MediasetChannel(Channel):
         else:
             raise Exception('Cannot retrieve channel M3U!')
 
+
+class ParamountChannel(Channel):
+    """
+    Abstraction for a Paramount channel.
+    """
+    def __init__(self):
+        """
+        Initialize the Paramount streaming channel and load playlist.
+        """
+        super().__init__()
+        self.name = 'Paramount Channel'
+        self.chUrl = 'http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8'
+
+
+class La7(Channel):
+    """
+    Abstraction for a La7 channel.
+    """
+    def __init__(self):
+        """
+        Initialize the La7 streaming channel and load playlist.
+        """
+        super().__init__()
+        self.name = 'La7'
+        self.chUrl = 'https://d15umi5iaezxgx.cloudfront.net/LA7/DRM/HLS/Live.m3u8'
+
+
 class M3U:
     """
     Creates a M3U playlist with all the required channels.
@@ -181,6 +208,9 @@ virginradio = MediasetChannel('EW', 'Virgin Radio')
 radiomontecarlo = MediasetChannel('BB', 'Radio Monte Carlo')
 
 
+# Paramount Channel
+paramount = ParamountChannel()
+
 if __name__ == '__main__':
     m3u = M3U('iptv-italy.m3u')
     m3u.addChannel(rai1)
@@ -206,6 +236,7 @@ if __name__ == '__main__':
     m3u.addChannel(boing)
     m3u.addChannel(cartoonito)
     m3u.addChannel(cine34)
+    m3u.addChannel(paramount)
     m3u.addChannel(rainews24)
     m3u.addChannel(tgcom24)
     m3u.addChannel(raisportpiuhd)
