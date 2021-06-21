@@ -170,16 +170,19 @@ class M3U:
     def dump(self):
         with open(self.filepath, 'w+') as f:
             f.write('#EXTM3U\n')
+            index = 0
             if self.logos_url is not None:
                 for channel in self.channels:
-                    lines = ['#EXTINF: -1 tvg-logo="{0}/{1}.png", {1}\n'.format(self.logos_url, channel.getName()),
+                    lines = ['#EXTINF: -1 channel-id="{1}" channel-number="{2}" tvg-name="{1}" tvg-logo="{0}/{1}.png", {1}\n'.format(self.logos_url, channel.getName(), index),
                              str(channel.getChUrl())+'\n']
                     f.writelines(lines)
+                    index += 1
             else:
                 for channel in self.channels:
-                    lines = ['#EXTINF: -1, {}\n'.format(channel.getName()),
+                    lines = ['#EXTINF: -1 channel-id="{1}" channel-number="{2}" tvg-name="{1}", {1}\n'.format(self.logos_url, channel.getName(), index),
                              str(channel.getChUrl())+'\n']
                     f.writelines(lines)
+                    index += 1
 
 
 ## Channels
@@ -231,7 +234,8 @@ paramount = ParamountChannel()
 
 
 if __name__ == '__main__':
-    m3u = M3U('iptv-italy.m3u')
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+    m3u = M3U('{}/iptv-italy.m3u'.format(script_dir))
     m3u.addChannel(rai1)
     m3u.addChannel(rai2)
     m3u.addChannel(rai3)

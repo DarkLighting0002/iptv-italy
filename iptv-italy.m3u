@@ -1,69 +1,69 @@
 #EXTM3U
-#EXTINF: -1, Rai 1
+#EXTINF: -1 channel-id="Rai 1" channel-number="0" tvg-name="Rai 1", Rai 1
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803
-#EXTINF: -1, Rai 2
+#EXTINF: -1 channel-id="Rai 2" channel-number="1" tvg-name="Rai 2", Rai 2
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308718
-#EXTINF: -1, Rai 3
+#EXTINF: -1 channel-id="Rai 3" channel-number="2" tvg-name="Rai 3", Rai 3
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709
-#EXTINF: -1, Rete 4
+#EXTINF: -1 channel-id="Rete 4" channel-number="3" tvg-name="Rete 4", Rete 4
 https://link.theplatform.eu/s/PR1GhC/kFE4DvC7iR3B
-#EXTINF: -1, Canale 5
+#EXTINF: -1 channel-id="Canale 5" channel-number="4" tvg-name="Canale 5", Canale 5
 https://link.theplatform.eu/s/PR1GhC/JscuIvoRoMUt
-#EXTINF: -1, Italia 1
+#EXTINF: -1 channel-id="Italia 1" channel-number="5" tvg-name="Italia 1", Italia 1
 https://link.theplatform.eu/s/PR1GhC/99kZxoGGRpGy
-#EXTINF: -1, Rai 4
+#EXTINF: -1 channel-id="Rai 4" channel-number="6" tvg-name="Rai 4", Rai 4
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746966
-#EXTINF: -1, Rai 5
+#EXTINF: -1 channel-id="Rai 5" channel-number="7" tvg-name="Rai 5", Rai 5
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=395276
-#EXTINF: -1, Rai Movie
+#EXTINF: -1 channel-id="Rai Movie" channel-number="8" tvg-name="Rai Movie", Rai Movie
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747002
-#EXTINF: -1, La5
+#EXTINF: -1 channel-id="La5" channel-number="9" tvg-name="La5", La5
 https://link.theplatform.eu/s/PR1GhC/e2pGSqVwoZlg
-#EXTINF: -1, Italia 2
+#EXTINF: -1 channel-id="Italia 2" channel-number="10" tvg-name="Italia 2", Italia 2
 https://link.theplatform.eu/s/PR1GhC/vEBEjFG74QzI
-#EXTINF: -1, Top Crime
+#EXTINF: -1 channel-id="Top Crime" channel-number="11" tvg-name="Top Crime", Top Crime
 https://link.theplatform.eu/s/PR1GhC/kNAbXXKwWGCk
-#EXTINF: -1, Iris
+#EXTINF: -1 channel-id="Iris" channel-number="12" tvg-name="Iris", Iris
 https://link.theplatform.eu/s/PR1GhC/kpsIaXwlaLcX
-#EXTINF: -1, Focus
+#EXTINF: -1 channel-id="Focus" channel-number="13" tvg-name="Focus", Focus
 https://link.theplatform.eu/s/PR1GhC/zGuRrwj2Zi_Y
-#EXTINF: -1, Mediaset Extra
+#EXTINF: -1 channel-id="Mediaset Extra" channel-number="14" tvg-name="Mediaset Extra", Mediaset Extra
 https://link.theplatform.eu/s/PR1GhC/TPLnrGYwjROh
-#EXTINF: -1, Canale 20
+#EXTINF: -1 channel-id="Canale 20" channel-number="15" tvg-name="Canale 20", Canale 20
 https://link.theplatform.eu/s/PR1GhC/1b62rIdZKUGl
-#EXTINF: -1, Rai Premium
+#EXTINF: -1 channel-id="Rai Premium" channel-number="16" tvg-name="Rai Premium", Rai Premium
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746992
-#EXTINF: -1, Rai Storia
+#EXTINF: -1 channel-id="Rai Storia" channel-number="17" tvg-name="Rai Storia", Rai Storia
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746990
-#EXTINF: -1, Rai Yoyo
+#EXTINF: -1 channel-id="Rai Yoyo" channel-number="18" tvg-name="Rai Yoyo", Rai Yoyo
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899
-#EXTINF: -1, Rai Gulp
+#EXTINF: -1 channel-id="Rai Gulp" channel-number="19" tvg-name="Rai Gulp", Rai Gulp
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953
-#EXTINF: -1, Boing
+#EXTINF: -1 channel-id="Boing" channel-number="20" tvg-name="Boing", Boing
 https://link.theplatform.eu/s/PR1GhC/_tKQTvuwOiTb
-#EXTINF: -1, Cartoonito
+#EXTINF: -1 channel-id="Cartoonito" channel-number="21" tvg-name="Cartoonito", Cartoonito
 https://link.theplatform.eu/s/PR1GhC/ETC4vWPrRI_W
-#EXTINF: -1, Cine 34
+#EXTINF: -1 channel-id="Cine 34" channel-number="22" tvg-name="Cine 34", Cine 34
 https://link.theplatform.eu/s/PR1GhC/sVf_w7YvBGsE
-#EXTINF: -1, Paramount Channel
+#EXTINF: -1 channel-id="Paramount Channel" channel-number="23" tvg-name="Paramount Channel", Paramount Channel
 http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8
-#EXTINF: -1, Rai News 24
+#EXTINF: -1 channel-id="Rai News 24" channel-number="24" tvg-name="Rai News 24", Rai News 24
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=1
-#EXTINF: -1, TGcom24
+#EXTINF: -1 channel-id="TGcom24" channel-number="25" tvg-name="TGcom24", TGcom24
 https://link.theplatform.eu/s/PR1GhC/2V0yPT90BkFc
-#EXTINF: -1, Rai Sport piu HD
+#EXTINF: -1 channel-id="Rai Sport piu HD" channel-number="26" tvg-name="Rai Sport piu HD", Rai Sport piu HD
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025
-#EXTINF: -1, Rai Sport
+#EXTINF: -1 channel-id="Rai Sport" channel-number="27" tvg-name="Rai Sport", Rai Sport
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358071
-#EXTINF: -1, Rai Scuola
+#EXTINF: -1 channel-id="Rai Scuola" channel-number="28" tvg-name="Rai Scuola", Rai Scuola
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011
-#EXTINF: -1, Rai Radio 2
+#EXTINF: -1 channel-id="Rai Radio 2" channel-number="29" tvg-name="Rai Radio 2", Rai Radio 2
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=5674080
-#EXTINF: -1, Radio 101
+#EXTINF: -1 channel-id="Radio 101" channel-number="30" tvg-name="Radio 101", Radio 101
 https://link.theplatform.eu/s/PR1GhC/xNVjpu9XfZw3
-#EXTINF: -1, Radio 105
+#EXTINF: -1 channel-id="Radio 105" channel-number="31" tvg-name="Radio 105", Radio 105
 https://link.theplatform.eu/s/PR1GhC/x7guEc1txnPB
-#EXTINF: -1, Virgin Radio
+#EXTINF: -1 channel-id="Virgin Radio" channel-number="32" tvg-name="Virgin Radio", Virgin Radio
 https://link.theplatform.eu/s/PR1GhC/jqsRq7u8lMNr
-#EXTINF: -1, Radio Monte Carlo
+#EXTINF: -1 channel-id="Radio Monte Carlo" channel-number="33" tvg-name="Radio Monte Carlo", Radio Monte Carlo
 https://link.theplatform.eu/s/PR1GhC/nnX1X76XoNCl
