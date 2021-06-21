@@ -79,7 +79,7 @@ class RaiChannel(Channel):
         self.name = self.chJson['channel']
 
         # Get logo
-        self.logo = 'logos/{}.svg'.format(self.id)
+        self.logo = '/logos/{}.svg'.format(self.id)
 
 
 class MediasetChannel(Channel):
@@ -120,7 +120,7 @@ class MediasetChannel(Channel):
             raise Exception('Cannot retrieve channel M3U!')
 
         # Get logo
-        self.logo = 'logos/{}.svg'.format(self.id)
+        self.logo = '/logos/{}.svg'.format(self.id)
 
 
 class ParamountChannel(Channel):

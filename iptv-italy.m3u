@@ -1,69 +1,69 @@
 #EXTM3U
-#EXTINF: -1 channel-id="rai1"tvg-name="Rai 1"tvg-logo="logos/rai1.svg",Rai 1
+#EXTINF: -1 channel-id="rai1"tvg-name="Rai 1"tvg-logo="/logos/rai1.svg",Rai 1
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803
-#EXTINF: -1 channel-id="rai2"tvg-name="Rai 2"tvg-logo="logos/rai2.svg",Rai 2
+#EXTINF: -1 channel-id="rai2"tvg-name="Rai 2"tvg-logo="/logos/rai2.svg",Rai 2
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308718
-#EXTINF: -1 channel-id="rai3"tvg-name="Rai 3"tvg-logo="logos/rai3.svg",Rai 3
+#EXTINF: -1 channel-id="rai3"tvg-name="Rai 3"tvg-logo="/logos/rai3.svg",Rai 3
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709
-#EXTINF: -1 channel-id="R4"tvg-name="Rete 4"tvg-logo="logos/R4.svg",Rete 4
+#EXTINF: -1 channel-id="R4"tvg-name="Rete 4"tvg-logo="/logos/R4.svg",Rete 4
 https://link.theplatform.eu/s/PR1GhC/kFE4DvC7iR3B
-#EXTINF: -1 channel-id="C5"tvg-name="Canale 5"tvg-logo="logos/C5.svg",Canale 5
+#EXTINF: -1 channel-id="C5"tvg-name="Canale 5"tvg-logo="/logos/C5.svg",Canale 5
 https://link.theplatform.eu/s/PR1GhC/JscuIvoRoMUt
-#EXTINF: -1 channel-id="I1"tvg-name="Italia 1"tvg-logo="logos/I1.svg",Italia 1
+#EXTINF: -1 channel-id="I1"tvg-name="Italia 1"tvg-logo="/logos/I1.svg",Italia 1
 https://link.theplatform.eu/s/PR1GhC/99kZxoGGRpGy
-#EXTINF: -1 channel-id="rai4"tvg-name="Rai 4"tvg-logo="logos/rai4.svg",Rai 4
+#EXTINF: -1 channel-id="rai4"tvg-name="Rai 4"tvg-logo="/logos/rai4.svg",Rai 4
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746966
-#EXTINF: -1 channel-id="rai5"tvg-name="Rai 5"tvg-logo="logos/rai5.svg",Rai 5
+#EXTINF: -1 channel-id="rai5"tvg-name="Rai 5"tvg-logo="/logos/rai5.svg",Rai 5
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=395276
-#EXTINF: -1 channel-id="raimovie"tvg-name="Rai Movie"tvg-logo="logos/raimovie.svg",Rai Movie
+#EXTINF: -1 channel-id="raimovie"tvg-name="Rai Movie"tvg-logo="/logos/raimovie.svg",Rai Movie
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747002
-#EXTINF: -1 channel-id="KA"tvg-name="La5"tvg-logo="logos/KA.svg",La5
+#EXTINF: -1 channel-id="KA"tvg-name="La5"tvg-logo="/logos/KA.svg",La5
 https://link.theplatform.eu/s/PR1GhC/e2pGSqVwoZlg
-#EXTINF: -1 channel-id="I2"tvg-name="Italia 2"tvg-logo="logos/I2.svg",Italia 2
+#EXTINF: -1 channel-id="I2"tvg-name="Italia 2"tvg-logo="/logos/I2.svg",Italia 2
 https://link.theplatform.eu/s/PR1GhC/vEBEjFG74QzI
-#EXTINF: -1 channel-id="LT"tvg-name="Top Crime"tvg-logo="logos/LT.svg",Top Crime
+#EXTINF: -1 channel-id="LT"tvg-name="Top Crime"tvg-logo="/logos/LT.svg",Top Crime
 https://link.theplatform.eu/s/PR1GhC/kNAbXXKwWGCk
-#EXTINF: -1 channel-id="KI"tvg-name="Iris"tvg-logo="logos/KI.svg",Iris
+#EXTINF: -1 channel-id="KI"tvg-name="Iris"tvg-logo="/logos/KI.svg",Iris
 https://link.theplatform.eu/s/PR1GhC/kpsIaXwlaLcX
-#EXTINF: -1 channel-id="FU"tvg-name="Focus"tvg-logo="logos/FU.svg",Focus
+#EXTINF: -1 channel-id="FU"tvg-name="Focus"tvg-logo="/logos/FU.svg",Focus
 https://link.theplatform.eu/s/PR1GhC/zGuRrwj2Zi_Y
-#EXTINF: -1 channel-id="KQ"tvg-name="Mediaset Extra"tvg-logo="logos/KQ.svg",Mediaset Extra
+#EXTINF: -1 channel-id="KQ"tvg-name="Mediaset Extra"tvg-logo="/logos/KQ.svg",Mediaset Extra
 https://link.theplatform.eu/s/PR1GhC/TPLnrGYwjROh
-#EXTINF: -1 channel-id="LB"tvg-name="Canale 20"tvg-logo="logos/LB.svg",Canale 20
+#EXTINF: -1 channel-id="LB"tvg-name="Canale 20"tvg-logo="/logos/LB.svg",Canale 20
 https://link.theplatform.eu/s/PR1GhC/1b62rIdZKUGl
-#EXTINF: -1 channel-id="raipremium"tvg-name="Rai Premium"tvg-logo="logos/raipremium.svg",Rai Premium
+#EXTINF: -1 channel-id="raipremium"tvg-name="Rai Premium"tvg-logo="/logos/raipremium.svg",Rai Premium
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746992
-#EXTINF: -1 channel-id="raistoria"tvg-name="Rai Storia"tvg-logo="logos/raistoria.svg",Rai Storia
+#EXTINF: -1 channel-id="raistoria"tvg-name="Rai Storia"tvg-logo="/logos/raistoria.svg",Rai Storia
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746990
-#EXTINF: -1 channel-id="raiyoyo"tvg-name="Rai Yoyo"tvg-logo="logos/raiyoyo.svg",Rai Yoyo
+#EXTINF: -1 channel-id="raiyoyo"tvg-name="Rai Yoyo"tvg-logo="/logos/raiyoyo.svg",Rai Yoyo
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899
-#EXTINF: -1 channel-id="raigulp"tvg-name="Rai Gulp"tvg-logo="logos/raigulp.svg",Rai Gulp
+#EXTINF: -1 channel-id="raigulp"tvg-name="Rai Gulp"tvg-logo="/logos/raigulp.svg",Rai Gulp
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953
-#EXTINF: -1 channel-id="KB"tvg-name="Boing"tvg-logo="logos/KB.svg",Boing
+#EXTINF: -1 channel-id="KB"tvg-name="Boing"tvg-logo="/logos/KB.svg",Boing
 https://link.theplatform.eu/s/PR1GhC/_tKQTvuwOiTb
-#EXTINF: -1 channel-id="LA"tvg-name="Cartoonito"tvg-logo="logos/LA.svg",Cartoonito
+#EXTINF: -1 channel-id="LA"tvg-name="Cartoonito"tvg-logo="/logos/LA.svg",Cartoonito
 https://link.theplatform.eu/s/PR1GhC/ETC4vWPrRI_W
-#EXTINF: -1 channel-id="B6"tvg-name="Cine 34"tvg-logo="logos/B6.svg",Cine 34
+#EXTINF: -1 channel-id="B6"tvg-name="Cine 34"tvg-logo="/logos/B6.svg",Cine 34
 https://link.theplatform.eu/s/PR1GhC/sVf_w7YvBGsE
 #EXTINF: -1 channel-id="None"tvg-name="Paramount Channel",Paramount Channel
 http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8
-#EXTINF: -1 channel-id="rainews24"tvg-name="Rai News 24"tvg-logo="logos/rainews24.svg",Rai News 24
+#EXTINF: -1 channel-id="rainews24"tvg-name="Rai News 24"tvg-logo="/logos/rainews24.svg",Rai News 24
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=1
-#EXTINF: -1 channel-id="KF"tvg-name="TGcom24"tvg-logo="logos/KF.svg",TGcom24
+#EXTINF: -1 channel-id="KF"tvg-name="TGcom24"tvg-logo="/logos/KF.svg",TGcom24
 https://link.theplatform.eu/s/PR1GhC/2V0yPT90BkFc
-#EXTINF: -1 channel-id="raisportpiuhd"tvg-name="Rai Sport piu HD"tvg-logo="logos/raisportpiuhd.svg",Rai Sport piu HD
+#EXTINF: -1 channel-id="raisportpiuhd"tvg-name="Rai Sport piu HD"tvg-logo="/logos/raisportpiuhd.svg",Rai Sport piu HD
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025
-#EXTINF: -1 channel-id="raisport"tvg-name="Rai Sport"tvg-logo="logos/raisport.svg",Rai Sport
+#EXTINF: -1 channel-id="raisport"tvg-name="Rai Sport"tvg-logo="/logos/raisport.svg",Rai Sport
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358071
-#EXTINF: -1 channel-id="raiscuola"tvg-name="Rai Scuola"tvg-logo="logos/raiscuola.svg",Rai Scuola
+#EXTINF: -1 channel-id="raiscuola"tvg-name="Rai Scuola"tvg-logo="/logos/raiscuola.svg",Rai Scuola
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011
-#EXTINF: -1 channel-id="rairadio2"tvg-name="Rai Radio 2"tvg-logo="logos/rairadio2.svg",Rai Radio 2
+#EXTINF: -1 channel-id="rairadio2"tvg-name="Rai Radio 2"tvg-logo="/logos/rairadio2.svg",Rai Radio 2
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=5674080
-#EXTINF: -1 channel-id="ER"tvg-name="Radio 101"tvg-logo="logos/ER.svg",Radio 101
+#EXTINF: -1 channel-id="ER"tvg-name="Radio 101"tvg-logo="/logos/ER.svg",Radio 101
 https://link.theplatform.eu/s/PR1GhC/xNVjpu9XfZw3
-#EXTINF: -1 channel-id="EC"tvg-name="Radio 105"tvg-logo="logos/EC.svg",Radio 105
+#EXTINF: -1 channel-id="EC"tvg-name="Radio 105"tvg-logo="/logos/EC.svg",Radio 105
 https://link.theplatform.eu/s/PR1GhC/x7guEc1txnPB
-#EXTINF: -1 channel-id="EW"tvg-name="Virgin Radio"tvg-logo="logos/EW.svg",Virgin Radio
+#EXTINF: -1 channel-id="EW"tvg-name="Virgin Radio"tvg-logo="/logos/EW.svg",Virgin Radio
 https://link.theplatform.eu/s/PR1GhC/jqsRq7u8lMNr
-#EXTINF: -1 channel-id="BB"tvg-name="Radio Monte Carlo"tvg-logo="logos/BB.svg",Radio Monte Carlo
+#EXTINF: -1 channel-id="BB"tvg-name="Radio Monte Carlo"tvg-logo="/logos/BB.svg",Radio Monte Carlo
 https://link.theplatform.eu/s/PR1GhC/nnX1X76XoNCl
