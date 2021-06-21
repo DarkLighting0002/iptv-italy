@@ -4,6 +4,9 @@ import json
 import requests as req
 
 
+WEBPATH = 'https://jurijnota.github.io/iptv-italy'
+
+
 ## Utils
 def parse_url(url):
     # Remove GET params
@@ -79,7 +82,7 @@ class RaiChannel(Channel):
         self.name = self.chJson['channel']
 
         # Get logo
-        self.logo = '/logos/{}.svg'.format(self.id)
+        self.logo = WEBPATH + '/logos/{}.svg'.format(self.id)
 
 
 class MediasetChannel(Channel):
@@ -120,7 +123,7 @@ class MediasetChannel(Channel):
             raise Exception('Cannot retrieve channel M3U!')
 
         # Get logo
-        self.logo = '/logos/{}.svg'.format(self.id)
+        self.logo = WEBPATH + '/logos/{}.svg'.format(self.id)
 
 
 class ParamountChannel(Channel):
@@ -188,7 +191,7 @@ class M3U:
             for channel in self.channels:
                 logo = channel.getLogo()
                 if logo is not None:
-                    lines = ['#EXTINF: -1 channel-id="{0}"'
+                    lines = ['#EXTINF: -1 tvg-id="{0}"'
                              'tvg-name="{1}"'
                              'tvg-logo="{2}",'
                              '{1}\n'.format(channel.getId(),
@@ -196,7 +199,7 @@ class M3U:
                                             channel.getLogo()),
                              str(channel.getChUrl())+'\n']
                 else:
-                    lines = ['#EXTINF: -1 channel-id="{0}"' 
+                    lines = ['#EXTINF: -1 tvg-id="{0}"' 
                              'tvg-name="{1}",'
                              '{1}\n'.format(channel.getId(),
                                             channel.getName()),
