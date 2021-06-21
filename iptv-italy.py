@@ -30,6 +30,8 @@ class Channel:
     def __init__(self):
         self.chUrl = None
         self.name = None
+        self.id = None
+        self.logo = None
 
     def getChUrl(self):
         return self.chUrl
@@ -37,6 +39,11 @@ class Channel:
     def getName(self):
         return self.name
 
+    def getId(self):
+        return self.id
+
+    def getLogo(self):
+        return self.logo
 
 class RaiChannel(Channel):
     """
@@ -50,7 +57,8 @@ class RaiChannel(Channel):
             id (string) : identifier of the channel (e.g. 'rai1')
         """
         super().__init__()
-        self.jsonUrl = 'https://www.raiplay.it/dirette/{}.json'.format(id)
+        self.id = id
+        self.jsonUrl = 'https://www.raiplay.it/dirette/{}.json'.format(self.id)
 
         # Get channel JSON
         jsonReq = req.get(self.jsonUrl)
@@ -70,6 +78,9 @@ class RaiChannel(Channel):
             raise Exception('Cannot retrieve channel name!')
         self.name = self.chJson['channel']
 
+        # Get logo
+        self.logo = 'logos/{}.svg'.format(self.id)
+
 
 class MediasetChannel(Channel):
     """
@@ -84,7 +95,8 @@ class MediasetChannel(Channel):
         """
         super().__init__()
         self.name = name
-        self.jsonUrl = 'https://static3.mediasetplay.mediaset.it/apigw/nownext/{}.json'.format(id)
+        self.id = id
+        self.jsonUrl = 'https://static3.mediasetplay.mediaset.it/apigw/nownext/{}.json'.format(self.id)
 
         # Get channel JSON
         jsonReq = req.get(self.jsonUrl)
@@ -106,6 +118,9 @@ class MediasetChannel(Channel):
                 break
         else:
             raise Exception('Cannot retrieve channel M3U!')
+
+        # Get logo
+        self.logo = 'logos/{}.svg'.format(self.id)
 
 
 class ParamountChannel(Channel):
@@ -151,7 +166,7 @@ class M3U:
     """
     Creates a M3U playlist with all the required channels.
     """
-    def __init__(self, filepath, logos_url=None):
+    def __init__(self, filepath):
         """
         Arguments:
             filepath (string) : path of the M3U file to dump
@@ -161,7 +176,6 @@ class M3U:
         self.filepath = filepath
         if os.path.isdir(self.filepath):
             raise IsADirectoryError("'{}' exists and is a directory.".format(self.filepath))
-        self.logos_url = logos_url
         self.channels = []
 
     def addChannel(self, channel):
@@ -171,18 +185,24 @@ class M3U:
         with open(self.filepath, 'w+') as f:
             f.write('#EXTM3U\n')
             index = 0
-            if self.logos_url is not None:
-                for channel in self.channels:
-                    lines = ['#EXTINF: -1 channel-id="{1}" channel-number="{2}" tvg-name="{1}" tvg-logo="{0}/{1}.png", {1}\n'.format(self.logos_url, channel.getName(), index),
+            for channel in self.channels:
+                logo = channel.getLogo()
+                if logo is not None:
+                    lines = ['#EXTINF: -1 channel-id="{0}"'
+                             'tvg-name="{1}"'
+                             'tvg-logo="{2}",'
+                             '{1}\n'.format(channel.getId(),
+                                            channel.getName(),
+                                            channel.getLogo()),
                              str(channel.getChUrl())+'\n']
-                    f.writelines(lines)
-                    index += 1
-            else:
-                for channel in self.channels:
-                    lines = ['#EXTINF: -1 channel-id="{1}" channel-number="{2}" tvg-name="{1}", {1}\n'.format(self.logos_url, channel.getName(), index),
+                else:
+                    lines = ['#EXTINF: -1 channel-id="{0}"' 
+                             'tvg-name="{1}",'
+                             '{1}\n'.format(channel.getId(),
+                                            channel.getName()),
                              str(channel.getChUrl())+'\n']
-                    f.writelines(lines)
-                    index += 1
+                f.writelines(lines)
+                index += 1
 
 
 ## Channels
