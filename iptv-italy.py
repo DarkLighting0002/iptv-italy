@@ -191,16 +191,16 @@ class M3U:
             for channel in self.channels:
                 logo = channel.getLogo()
                 if logo is not None:
-                    lines = ['#EXTINF: -1 tvg-id="{0}"'
-                             'tvg-name="{1}"'
-                             'tvg-logo="{2}",'
+                    lines = ['#EXTINF: -1 tvg-id="{0}" '
+                             'tvg-name="{1}" '
+                             'tvg-logo="{2}", '
                              '{1}\n'.format(channel.getId(),
                                             channel.getName(),
                                             channel.getLogo()),
                              str(channel.getChUrl())+'\n']
                 else:
-                    lines = ['#EXTINF: -1 tvg-id="{0}"' 
-                             'tvg-name="{1}",'
+                    lines = ['#EXTINF: -1 tvg-id="{0}" ' 
+                             'tvg-name="{1}", '
                              '{1}\n'.format(channel.getId(),
                                             channel.getName()),
                              str(channel.getChUrl())+'\n']
