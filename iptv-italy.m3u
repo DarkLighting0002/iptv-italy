@@ -2,9 +2,9 @@
 #EXTINF: -1 tvg-id="rai1" tvg-name="Rai 1" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rai1.svg", Rai 1
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803
 #EXTINF: -1 tvg-id="rai2" tvg-name="Rai 2" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rai2.svg", Rai 2
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308718
+https://8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raidue1/hls/playlist_ma.m3u8?baseuri=%2Fraidue1%2Fhls%2F&tstart=0&tend=1624400388&tof=86400&tk2=23219aaaac38cb539f88726e321974e133425d768f198ebf2cbba7c4eba0a186
 #EXTINF: -1 tvg-id="rai3" tvg-name="Rai 3" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rai3.svg", Rai 3
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709
+https://8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raitre1/hls/playlist_ma.m3u8?baseuri=%2Fraitre1%2Fhls%2F&tstart=0&tend=1624400389&tof=86400&tk2=fc8bf095adc1b5a919c5fe460a56c7fa730e46e107a6525c8162585555e156a6
 #EXTINF: -1 tvg-id="R4" tvg-name="Rete 4" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/R4.svg", Rete 4
 https://link.theplatform.eu/s/PR1GhC/kFE4DvC7iR3B
 #EXTINF: -1 tvg-id="C5" tvg-name="Canale 5" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/C5.svg", Canale 5
@@ -48,11 +48,11 @@ https://link.theplatform.eu/s/PR1GhC/sVf_w7YvBGsE
 #EXTINF: -1 tvg-id="None" tvg-name="Paramount Channel", Paramount Channel
 http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8
 #EXTINF: -1 tvg-id="rainews24" tvg-name="Rai News 24" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rainews24.svg", Rai News 24
-http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=1
+https://8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/playlist_mo.m3u8?baseuri=%2Frainews1%2Fhls%2F&tstart=0&tend=1624400395&tof=86400&tk2=c954747f0b7c61f5996c4ad25bb3076fcd7b35c82b62bd5dc0f06822eb05e930
 #EXTINF: -1 tvg-id="KF" tvg-name="TGcom24" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/KF.svg", TGcom24
 https://link.theplatform.eu/s/PR1GhC/2V0yPT90BkFc
 #EXTINF: -1 tvg-id="raisportpiuhd" tvg-name="Rai Sport piu HD" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raisportpiuhd.svg", Rai Sport piu HD
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358025
+https://8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raisportuno1/hls/playlist_mo.m3u8?baseuri=%2Fraisportuno1%2Fhls%2F&tstart=0&tend=1624400396&tof=86400&tk2=60036769103f8c2a3e92f3cf6d121ac0bf348a8b0abca03259fb2d418119d9b8
 #EXTINF: -1 tvg-id="raisport" tvg-name="Rai Sport" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raisport.svg", Rai Sport
 https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358071
 #EXTINF: -1 tvg-id="raiscuola" tvg-name="Rai Scuola" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raiscuola.svg", Rai Scuola

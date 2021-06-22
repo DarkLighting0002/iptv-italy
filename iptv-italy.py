@@ -75,6 +75,12 @@ class RaiChannel(Channel):
         elif 'content_url' not in self.chJson['video'].keys():
             raise Exception('Cannot retrieve channel M3U!')
         self.chUrl = self.chJson['video']['content_url']
+        # Avoid problems with cookies
+        chUrlReq = req.get(self.chUrl)
+        if not chUrlReq.ok:
+            raise Exception('connection error {}'.format(chUrlReq.status_code))
+        if len(chUrlReq.history) > 0:
+            self.chUrl = chUrlReq.history[-1].url
 
         # Get name
         if 'channel' not in self.chJson.keys():
@@ -121,6 +127,13 @@ class MediasetChannel(Channel):
                 break
         else:
             raise Exception('Cannot retrieve channel M3U!')
+
+        # Avoid problems with cookies
+        chUrlReq = req.get(self.chUrl)
+        if not chUrlReq.ok:
+            raise Exception('connection error {}'.format(chUrlReq.status_code))
+        if len(chUrlReq.history) > 0:
+            self.chUrl = chUrlReq.history[-1].url
 
         # Get logo
         self.logo = WEBPATH + '/logos/{}.svg'.format(self.id)
