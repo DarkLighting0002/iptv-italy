@@ -79,8 +79,7 @@ class RaiChannel(Channel):
         chUrlReq = req.get(self.chUrl)
         if not chUrlReq.ok:
             raise Exception('connection error {}'.format(chUrlReq.status_code))
-        if len(chUrlReq.history) > 0:
-            self.chUrl = chUrlReq.history[-1].url
+        self.chUrl = chUrlReq.url
 
         # Get name
         if 'channel' not in self.chJson.keys():
@@ -132,8 +131,7 @@ class MediasetChannel(Channel):
         chUrlReq = req.get(self.chUrl)
         if not chUrlReq.ok:
             raise Exception('connection error {}'.format(chUrlReq.status_code))
-        if len(chUrlReq.history) > 0:
-            self.chUrl = chUrlReq.history[-1].url
+        self.chUrl = chUrlReq.url
 
         # Get logo
         self.logo = WEBPATH + '/logos/{}.svg'.format(self.id)

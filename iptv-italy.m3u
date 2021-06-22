@@ -1,69 +1,69 @@
 #EXTM3U
 #EXTINF: -1 tvg-id="rai1" tvg-name="Rai 1" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rai1.svg", Rai 1
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=2606803
+https://raiuno1-live.akamaized.net/hls/live/598308/raiuno1/raiuno1/playlist_1200-2400.m3u8?hdnea=st=1624400702~exp=1624400852~acl=/*~hmac=d6c486fd99b5c3383857fe14347fef6fedefb1ec425ed9b40232d912882e0ee1
 #EXTINF: -1 tvg-id="rai2" tvg-name="Rai 2" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rai2.svg", Rai 2
-https://8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raidue1/hls/playlist_ma.m3u8?baseuri=%2Fraidue1%2Fhls%2F&tstart=0&tend=1624400388&tof=86400&tk2=23219aaaac38cb539f88726e321974e133425d768f198ebf2cbba7c4eba0a186
+https://streamcdnm15-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raidue1/hls/playlist_ma.m3u8?baseuri=%2Fraidue1%2Fhls%2F&tstart=0&tend=1624400882&tof=86400&tk2=2265d6415356621b08bec7d65bf4bc385d18a8f2e2ac70e8d5861286412b653c
 #EXTINF: -1 tvg-id="rai3" tvg-name="Rai 3" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rai3.svg", Rai 3
-https://8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raitre1/hls/playlist_ma.m3u8?baseuri=%2Fraitre1%2Fhls%2F&tstart=0&tend=1624400389&tof=86400&tk2=fc8bf095adc1b5a919c5fe460a56c7fa730e46e107a6525c8162585555e156a6
+https://streamcdnm15-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raitre1/hls/playlist_ma.m3u8?baseuri=%2Fraitre1%2Fhls%2F&tstart=0&tend=1624400884&tof=86400&tk2=b97ea4dfa4c4efb2698802e94cad77786bc7e6188dacfd65264b4f50e0c13359
 #EXTINF: -1 tvg-id="R4" tvg-name="Rete 4" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/R4.svg", Rete 4
-https://link.theplatform.eu/s/PR1GhC/kFE4DvC7iR3B
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(r4)/index.m3u8
 #EXTINF: -1 tvg-id="C5" tvg-name="Canale 5" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/C5.svg", Canale 5
-https://link.theplatform.eu/s/PR1GhC/JscuIvoRoMUt
+https://live2t.msf.cdn.mediaset.net/Content/hls_h0_cls_vos/live/channel(c5)/index.m3u8?hdnts=st=1624400690~exp=1624415120~acl=/Content/hls_h0_cls_vos/live/channel(c5)*~hmac=760181af78a78429b2ecaf933c16bddd2df8aeb7b5c72392ee864fea2cf9dbdc
 #EXTINF: -1 tvg-id="I1" tvg-name="Italia 1" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/I1.svg", Italia 1
-https://link.theplatform.eu/s/PR1GhC/99kZxoGGRpGy
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(i1)/index.m3u8
 #EXTINF: -1 tvg-id="rai4" tvg-name="Rai 4" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rai4.svg", Rai 4
-http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746966
+https://raiquattro1-live.akamaized.net/hls/live/598315/raiquattro1/raiquattro1/playlist_ma.m3u8?hdnea=st=1624400704~exp=1624400854~acl=/*~hmac=b0859d24870856d8a3d888e6b79a970a4f7391b1aeb2344df252d3f7bf73dcb6
 #EXTINF: -1 tvg-id="rai5" tvg-name="Rai 5" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rai5.svg", Rai 5
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=395276
+https://raicinque1-live.akamaized.net/hls/live/598318/raicinque1/raicinque1/playlist_ma.m3u8?hdnea=st=1624400705~exp=1624400855~acl=/*~hmac=6bc438108c51ee2ff71533fb420ac85832b7436e42d137fb44946434a353f757
 #EXTINF: -1 tvg-id="raimovie" tvg-name="Rai Movie" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raimovie.svg", Rai Movie
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747002
+https://raimovie1-live.akamaized.net/hls/live/598324/raimovie1/raimovie1/playlist_ma.m3u8?hdnea=st=1624400706~exp=1624400856~acl=/*~hmac=cea22b4de19b9cc85fea442604dfe51f5b11f9cc17ae36fc60e38626c3269686
 #EXTINF: -1 tvg-id="KA" tvg-name="La5" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/KA.svg", La5
-https://link.theplatform.eu/s/PR1GhC/e2pGSqVwoZlg
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(ka)/index.m3u8
 #EXTINF: -1 tvg-id="I2" tvg-name="Italia 2" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/I2.svg", Italia 2
-https://link.theplatform.eu/s/PR1GhC/vEBEjFG74QzI
+https://live2t.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(i2)/index.m3u8?hdnts=st=1624400694~exp=1624415124~acl=/Content/hls_h0_clr_vos/live/channel(i2)*~hmac=c652af79ed54044253ebabee372970190bb1410e77964004087069807196adba
 #EXTINF: -1 tvg-id="LT" tvg-name="Top Crime" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/LT.svg", Top Crime
-https://link.theplatform.eu/s/PR1GhC/kNAbXXKwWGCk
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(lt)/index.m3u8
 #EXTINF: -1 tvg-id="KI" tvg-name="Iris" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/KI.svg", Iris
-https://link.theplatform.eu/s/PR1GhC/kpsIaXwlaLcX
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(ki)/index.m3u8
 #EXTINF: -1 tvg-id="FU" tvg-name="Focus" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/FU.svg", Focus
-https://link.theplatform.eu/s/PR1GhC/zGuRrwj2Zi_Y
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(fu)/index.m3u8
 #EXTINF: -1 tvg-id="KQ" tvg-name="Mediaset Extra" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/KQ.svg", Mediaset Extra
-https://link.theplatform.eu/s/PR1GhC/TPLnrGYwjROh
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(kq)/index.m3u8
 #EXTINF: -1 tvg-id="LB" tvg-name="Canale 20" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/LB.svg", Canale 20
-https://link.theplatform.eu/s/PR1GhC/1b62rIdZKUGl
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(lb)/index.m3u8
 #EXTINF: -1 tvg-id="raipremium" tvg-name="Rai Premium" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raipremium.svg", Rai Premium
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746992
+https://raipremium1-live.akamaized.net/hls/live/598328/raipremium1/raipremium1/playlist_ma.m3u8?hdnea=st=1624400707~exp=1624400857~acl=/*~hmac=31c61f11c2e2238cf3cde6d0d00775be1622a2b63f23709ac9655f6b0ea26876
 #EXTINF: -1 tvg-id="raistoria" tvg-name="Rai Storia" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raistoria.svg", Rai Storia
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746990
+https://raistoria1-live.akamaized.net/hls/live/598337/raistoria1/raistoria1/playlist.m3u8?hdnea=st=1624400708~exp=1624400858~acl=/*~hmac=63de85619bf045184cef263620b5fa54b59888e871bc8bc132599b4521ffa1b9
 #EXTINF: -1 tvg-id="raiyoyo" tvg-name="Rai Yoyo" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raiyoyo.svg", Rai Yoyo
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746899
+https://raiyoyo1-live.akamaized.net/hls/live/598330/raiyoyo1/raiyoyo1/playlist.m3u8?hdnea=st=1624400708~exp=1624400858~acl=/*~hmac=63de85619bf045184cef263620b5fa54b59888e871bc8bc132599b4521ffa1b9
 #EXTINF: -1 tvg-id="raigulp" tvg-name="Rai Gulp" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raigulp.svg", Rai Gulp
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953
+https://raigulp1-live.akamaized.net/hls/live/598332/raigulp1/raigulp1/playlist_ma.m3u8?hdnea=st=1624400709~exp=1624400859~acl=/*~hmac=a63dcd6ea76078373fa54208a4443f78b78aeca40ed77d3b06deb7e5b816daec
 #EXTINF: -1 tvg-id="KB" tvg-name="Boing" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/KB.svg", Boing
-https://link.theplatform.eu/s/PR1GhC/_tKQTvuwOiTb
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(kb)/index.m3u8
 #EXTINF: -1 tvg-id="LA" tvg-name="Cartoonito" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/LA.svg", Cartoonito
-https://link.theplatform.eu/s/PR1GhC/ETC4vWPrRI_W
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(la)/index.m3u8
 #EXTINF: -1 tvg-id="B6" tvg-name="Cine 34" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/B6.svg", Cine 34
-https://link.theplatform.eu/s/PR1GhC/sVf_w7YvBGsE
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(b6)/index.m3u8
 #EXTINF: -1 tvg-id="None" tvg-name="Paramount Channel", Paramount Channel
 http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8
 #EXTINF: -1 tvg-id="rainews24" tvg-name="Rai News 24" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rainews24.svg", Rai News 24
-https://8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/playlist_mo.m3u8?baseuri=%2Frainews1%2Fhls%2F&tstart=0&tend=1624400395&tof=86400&tk2=c954747f0b7c61f5996c4ad25bb3076fcd7b35c82b62bd5dc0f06822eb05e930
+https://streamcdnm15-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/rainews1/hls/playlist_mo.m3u8?baseuri=%2Frainews1%2Fhls%2F&tstart=0&tend=1624400890&tof=86400&tk2=61fcf17062b0e2083ee2c936896d973b6ffaf6878a242898fb5987aaff005619
 #EXTINF: -1 tvg-id="KF" tvg-name="TGcom24" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/KF.svg", TGcom24
-https://link.theplatform.eu/s/PR1GhC/2V0yPT90BkFc
+https://live2.msf.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(kf)/index.m3u8
 #EXTINF: -1 tvg-id="raisportpiuhd" tvg-name="Rai Sport piu HD" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raisportpiuhd.svg", Rai Sport piu HD
-https://8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raisportuno1/hls/playlist_mo.m3u8?baseuri=%2Fraisportuno1%2Fhls%2F&tstart=0&tend=1624400396&tof=86400&tk2=60036769103f8c2a3e92f3cf6d121ac0bf348a8b0abca03259fb2d418119d9b8
+https://streamcdnm15-8e7439fdb1694c8da3a0fd63e4dda518.msvdn.net/raisportuno1/hls/playlist_mo.m3u8?baseuri=%2Fraisportuno1%2Fhls%2F&tstart=0&tend=1624400891&tof=86400&tk2=b0dd1b30acc20d11aeeb8bac2f055b6a6f026cdb1c789c1019931bd02e1c269d
 #EXTINF: -1 tvg-id="raisport" tvg-name="Rai Sport" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raisport.svg", Rai Sport
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=358071
+https://raisportdue1-live.akamaized.net/hls/live/598322/raisportdue1/raisportdue1/playlist.m3u8?hdnea=st=1624400712~exp=1624400862~acl=/*~hmac=e1e7705eddd9b73a4485737d12064585528f0d38dcc51f454ee34f33abfc71bb
 #EXTINF: -1 tvg-id="raiscuola" tvg-name="Rai Scuola" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raiscuola.svg", Rai Scuola
-https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011
+https://raiscuola1-live.akamaized.net/hls/live/598335/raiscuola1/raiscuola1/playlist.m3u8?hdnea=st=1624400718~exp=1624400868~acl=/*~hmac=0df9888007797d109adcd8a03b3e4c9c8b0d6b943eaaa4dd4fb0033163323c81
 #EXTINF: -1 tvg-id="rairadio2" tvg-name="Rai Radio 2" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rairadio2.svg", Rai Radio 2
-http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=5674080
+https://raievent9-live.akamaized.net/hls/live/619188/raievent9/raievent9/playlist.m3u8?hdnea=st=1624400718~exp=1624400868~acl=/*~hmac=0df9888007797d109adcd8a03b3e4c9c8b0d6b943eaaa4dd4fb0033163323c81
 #EXTINF: -1 tvg-id="ER" tvg-name="Radio 101" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/ER.svg", Radio 101
-https://link.theplatform.eu/s/PR1GhC/xNVjpu9XfZw3
+https://live2.msr.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(er)/index.m3u8
 #EXTINF: -1 tvg-id="EC" tvg-name="Radio 105" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/EC.svg", Radio 105
-https://link.theplatform.eu/s/PR1GhC/x7guEc1txnPB
+https://live2t.msr.cdn.mediaset.net/content/hls_h0_clr_vos/live/channel(ec)/index.m3u8?hdnts=st=1624400704~exp=1624415134~acl=/content/hls_h0_clr_vos/live/channel(ec)*~hmac=1a05a07735857bff9a50682796a23f5494a762ab2fc78538ee1f34cea3544f58
 #EXTINF: -1 tvg-id="EW" tvg-name="Virgin Radio" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/EW.svg", Virgin Radio
-https://link.theplatform.eu/s/PR1GhC/jqsRq7u8lMNr
+https://live2.msr.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(ew)/index.m3u8
 #EXTINF: -1 tvg-id="BB" tvg-name="Radio Monte Carlo" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/BB.svg", Radio Monte Carlo
-https://link.theplatform.eu/s/PR1GhC/nnX1X76XoNCl
+https://live2.msr.cdn.mediaset.net/Content/hls_h0_clr_vos/live/channel(bb)/index.m3u8
