@@ -31,122 +31,152 @@ class Channel:
     Abstraction for a generic channel.
     """
     def __init__(self):
+        """
+        Init class attributes.
+        """
         self.chUrl = None
         self.name = None
         self.id = None
+        self.number = None
         self.logo = None
+        self.lines = []
+    
+    def M3ULines(self):
+        """
+        Return the lines to write in the M3U file.
+        """
+        self.lines.append('#EXTINF: -1 ')
+        if self.number is not None:
+            self.lines.append('channel-number="{}" '.format(self.number))
+        if self.logo is not None:
+            self.lines.append('tvg-logo="{}" '.format(self.logo))
+        if self.id is not None:
+            self.lines.append('tvg-id="{}" '.format(self.id))
+        elif self.name is not None:
+            self.lines.append('tvg-id="{}" '.format(''.join(c.lower() for c in self.name if not c.isspace())))
+        if self.name is not None:            
+            self.lines.append('tvg-name="{}" '.format(self.name))
+            self.lines.append(', {}'.format(self.name))
+        self.lines.append('\n')
+        self.lines.append(self.chUrl)
+        self.lines.append('\n')
+        return self.lines
 
-    def getChUrl(self):
-        return self.chUrl
-
-    def getName(self):
-        return self.name
-
-    def getId(self):
-        return self.id
-
-    def getLogo(self):
-        return self.logo
 
 class RaiChannel(Channel):
     """
     Abstraction for a Rai channel.
     """
-    def __init__(self, id):
+
+    NAME_ID = {
+        'Rai 1': 'rai1',
+        'Rai 2': 'rai2',
+        'Rai 3': 'rai3',
+        'Rai 4': 'rai4',
+        'Rai 5': 'rai5',
+        'Rai Movie': 'raimovie',
+        'Rai Premium': 'raipremium',
+        'Rai Storia': 'raistoria',
+        'Rai Yoyo': 'raiyoyo',
+        'Rai Gulp': 'raigulp',
+        'Rai News 24': 'rainews24',
+        'Rai Sport Piu HD': 'raisportpiuhd',
+        'Rai Sport': 'raisport',
+        'Rai Scuola': 'raiscuola',
+        'Rai Radio 2': 'rairadio2'
+    }
+
+    def __init__(self, name, number=None):
         """
         Initialize the Rai streaming channel and load playlist.
 
         Arguments:
-            id (string) : identifier of the channel (e.g. 'rai1')
+            name (string): name of the channel (e.g. 'Rai 1')
+            number (int) : number of the channel (e.g. 1)
         """
         super().__init__()
-        self.id = id
-        self.jsonUrl = 'https://www.raiplay.it/dirette/{}.json'.format(self.id)
-
-        # Get channel JSON
-        jsonReq = req.get(self.jsonUrl)
-        if not jsonReq.ok:
-            raise Exception('connection error {}'.format(jsonReq.status_code))
-        self.chJson = json.loads(jsonReq.text)
+        self.name = name
+        self.id = self.NAME_ID[self.name]
+        self.number = number
+        self.logo = WEBPATH + '/logos/{}.png'.format(self.id)
 
         # Get playlists URL
-        if 'video' not in self.chJson.keys():
+        jsonUrl = 'https://www.raiplay.it/dirette/{}.json'.format(self.id)
+        jsonReq = req.get(jsonUrl)
+        if not jsonReq.ok:
+            raise Exception('connection error {}'.format(jsonReq.status_code))
+        chJson = json.loads(jsonReq.text)
+        if 'video' not in chJson.keys():
             raise Exception('Cannot retrieve channel M3U!')
-        elif 'content_url' not in self.chJson['video'].keys():
+        elif 'content_url' not in chJson['video'].keys():
             raise Exception('Cannot retrieve channel M3U!')
-        self.chUrl = self.chJson['video']['content_url']
-        # Avoid problems with cookies
-        chUrlReq = req.get(self.chUrl)
-        if not chUrlReq.ok:
-            raise Exception('connection error {}'.format(chUrlReq.status_code))
-        self.chUrl = chUrlReq.url
+        self.chUrl = chJson['video']['content_url']
 
-        # Get name
-        if 'channel' not in self.chJson.keys():
-            raise Exception('Cannot retrieve channel name!')
-        self.name = self.chJson['channel']
-
-        # Get logo
-        self.logo = WEBPATH + '/logos/{}.svg'.format(self.id)
+    def M3ULines(self):
+        """
+        This updated parser solves the issue that prevent Rai channels
+        from being played on VLC.
+        """
+        self.lines.append('#EXTVLCOPT:http-user-agent=Mozilla/5.0\n')
+        return super().M3ULines()
 
 
 class MediasetChannel(Channel):
     """
     Abstraction for a Mediaset channel.
     """
-    def __init__(self, id, name):
+
+    NAME_ID = {
+        'Rete 4': 'r4',
+        'Canale 5': 'c5',
+        'Italia 1': 'i6',
+        'Canale 20': 'lb',
+        'La5': 'ka',
+        'Italia 2': 'i2',
+        'Cine 34': 'b6',
+        'Mediaset Extra': 'kq',
+        'Focus': 'fu',
+        'Top Crime': 'lt',
+        'Iris': 'ki',
+        'Boing': 'kb',
+        'Cartoonito': 'la',
+        'TGcom24': 'kf',
+        'Radio 105': 'ec',
+        'Radio 101': 'er',
+        'Virgin Radio': 'ew',
+        'Radio Monte Carlo': 'bb'
+    }
+
+    def __init__(self, name, number=None):
         """
         Initialize the Mediaset streaming channel and load playlist.
 
         Arguments:
-            id (string) : identifier of the channel (e.g. 'C5')
+            name (string): name of the channel (e.g. 'Canale 5')
+            number (int) : number of the channel (e.g. 5)
         """
         super().__init__()
         self.name = name
-        self.id = id
-        self.jsonUrl = 'https://static3.mediasetplay.mediaset.it/apigw/nownext/{}.json'.format(self.id)
-
-        # Get channel JSON
-        jsonReq = req.get(self.jsonUrl)
-        if not jsonReq.ok:
-            raise Exception('connection error {}'.format(jsonReq.status_code))
-        self.chJson = json.loads(jsonReq.text)
-
-        # Get playlists URL
-        if 'response' not in self.chJson.keys():
-            raise Exception('Cannot retrieve channel M3U!')
-        elif 'tuningInstruction' not in self.chJson['response'].keys():
-            raise Exception('Cannot retrieve channel M3U!')
-        elif 'urn:theplatform:tv:location:any' not in self.chJson['response']['tuningInstruction'].keys():
-            raise Exception('Cannot retrieve channel M3U!')
-        tuning_data = self.chJson['response']['tuningInstruction']['urn:theplatform:tv:location:any']
-        for tuning_datum in tuning_data:
-            if tuning_datum['format'] == 'application/x-mpegURL':
-                self.chUrl = tuning_datum['publicUrls'][0]
-                break
-        else:
-            raise Exception('Cannot retrieve channel M3U!')
-
-        # Avoid problems with cookies
-        chUrlReq = req.get(self.chUrl)
-        if not chUrlReq.ok:
-            raise Exception('connection error {}'.format(chUrlReq.status_code))
-        self.chUrl = chUrlReq.url
-
-        # Get logo
-        self.logo = WEBPATH + '/logos/{}.svg'.format(self.id)
+        self.id = self.NAME_ID[self.name]
+        self.number = number
+        self.chUrl = 'https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel({})/index.m3u8'.format(self.id)
+        self.logo = WEBPATH + '/logos/{}.png'.format(self.id)
 
 
 class ParamountChannel(Channel):
     """
     Abstraction for a Paramount channel.
     """
-    def __init__(self):
+    def __init__(self, number=None):
         """
         Initialize the Paramount streaming channel and load playlist.
+
+        Arguments:
+            number (int): number of the channel
         """
         super().__init__()
         self.name = 'Paramount Channel'
+        self.number = number
         self.chUrl = 'http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8'
 
 
@@ -154,12 +184,16 @@ class La7(Channel):
     """
     Abstraction for a La7 channel.
     """
-    def __init__(self):
+    def __init__(self, number=None):
         """
         Initialize the La7 streaming channel and load playlist.
+
+        Arguments:
+            number (int): number of the channel
         """
         super().__init__()
         self.name = 'La7'
+        self.number = number
         self.chUrl = 'https://d15umi5iaezxgx.cloudfront.net/LA7/DRM/HLS/Live.m3u8'
 
 
@@ -167,12 +201,16 @@ class La7d(Channel):
     """
     Abstraction for a La7d channel.
     """
-    def __init__(self):
+    def __init__(self, number=None):
         """
         Initialize the La7d streaming channel and load playlist.
+
+        Arguments:
+            number (int): number of the channel
         """
         super().__init__()
         self.name = 'La7d'
+        self.number = number
         self.chUrl = 'https://d15umi5iaezxgx.cloudfront.net/LA7D/DRM/HLS/Live.m3u8'
 
 
@@ -192,76 +230,69 @@ class M3U:
             raise IsADirectoryError("'{}' exists and is a directory.".format(self.filepath))
         self.channels = []
 
-    def addChannel(self, channel):
-        self.channels.append(channel)
+    def addChannel(self, channel, number=None):
+        """
+        Add channel to M3U playlist
+
+        Arguments:
+            channel     : the channel to add
+            number (int): the channel number (optional)
+        """
+        if number is not None:
+            channel.number = number
+        else:
+            if channel.number is None:
+                channel.number = len(self.channels) + 1
+            self.channels.append(channel)
 
     def dump(self):
         with open(self.filepath, 'w+') as f:
             f.write('#EXTM3U\n')
-            index = 0
             for channel in self.channels:
-                logo = channel.getLogo()
-                if logo is not None:
-                    lines = ['#EXTINF: -1 tvg-id="{0}" '
-                             'tvg-name="{1}" '
-                             'tvg-logo="{2}", '
-                             '{1}\n'.format(channel.getId(),
-                                            channel.getName(),
-                                            channel.getLogo()),
-                             str(channel.getChUrl())+'\n']
-                else:
-                    lines = ['#EXTINF: -1 tvg-id="{0}" ' 
-                             'tvg-name="{1}", '
-                             '{1}\n'.format(channel.getId(),
-                                            channel.getName()),
-                             str(channel.getChUrl())+'\n']
-                f.writelines(lines)
-                index += 1
+                f.writelines(channel.M3ULines())
 
 
 ## Channels
 # Rai Channels
-rai1 = RaiChannel('rai1')
-rai2 = RaiChannel('rai2')
-rai3 = RaiChannel('rai3')
-rai4 = RaiChannel('rai4')
-rai5 = RaiChannel('rai5')
-raimovie = RaiChannel('raimovie')
-raipremium = RaiChannel('raipremium')
-raistoria = RaiChannel('raistoria')
-raiyoyo = RaiChannel('raiyoyo')
-raigulp = RaiChannel('raigulp')
-rainews24 = RaiChannel('rainews24')
-raisportpiuhd = RaiChannel('raisportpiuhd')
-raisport = RaiChannel('raisport')
-raiscuola = RaiChannel('raiscuola')
-rairadio2 = RaiChannel('rairadio2')
+rai1 = RaiChannel('Rai 1', 1)
+rai2 = RaiChannel('Rai 2', 2)
+rai3 = RaiChannel('Rai 3', 3)
+rai4 = RaiChannel('Rai 4')
+rai5 = RaiChannel('Rai 5')
+raimovie = RaiChannel('Rai Movie')
+raipremium = RaiChannel('Rai Premium')
+raistoria = RaiChannel('Rai Storia')
+raiyoyo = RaiChannel('Rai Yoyo')
+raigulp = RaiChannel('Rai Gulp')
+rainews24 = RaiChannel('Rai News 24')
+raisportpiuhd = RaiChannel('Rai Sport Piu HD')
+raisport = RaiChannel('Rai Sport')
+raiscuola = RaiChannel('Rai Scuola')
+rairadio2 = RaiChannel('Rai Radio 2')
 
 # Mediaset Channels
-rete4 = MediasetChannel('R4', 'Rete 4')
-canale5 = MediasetChannel('C5', 'Canale 5')
-italia1 = MediasetChannel('I1', 'Italia 1')
-canale20 = MediasetChannel('LB', 'Canale 20')
-la5 = MediasetChannel('KA', 'La5')
-italia2 = MediasetChannel('I2', 'Italia 2')
-cine34 = MediasetChannel('B6', 'Cine 34')
-medextra = MediasetChannel('KQ', 'Mediaset Extra')
-focus = MediasetChannel('FU', 'Focus')
-topcrime = MediasetChannel('LT', 'Top Crime')
-iris = MediasetChannel('KI', 'Iris')
-boing = MediasetChannel('KB', 'Boing')
-cartoonito = MediasetChannel('LA', 'Cartoonito')
-tgcom24 = MediasetChannel('KF', 'TGcom24')
-radio105 = MediasetChannel('EC', 'Radio 105')
-radio101 = MediasetChannel('ER', 'Radio 101')
-virginradio = MediasetChannel('EW', 'Virgin Radio')
-radiomontecarlo = MediasetChannel('BB', 'Radio Monte Carlo')
-
+rete4 = MediasetChannel('Rete 4', 4)
+canale5 = MediasetChannel('Canale 5', 5)
+italia1 = MediasetChannel('Italia 1', 6)
+canale20 = MediasetChannel('Canale 20')
+la5 = MediasetChannel('La5')
+italia2 = MediasetChannel('Italia 2')
+cine34 = MediasetChannel('Cine 34')
+medextra = MediasetChannel('Mediaset Extra')
+focus = MediasetChannel('Focus')
+topcrime = MediasetChannel('Top Crime')
+iris = MediasetChannel('Iris')
+boing = MediasetChannel('Boing')
+cartoonito = MediasetChannel('Cartoonito')
+tgcom24 = MediasetChannel('TGcom24')
+radio105 = MediasetChannel('Radio 105')
+radio101 = MediasetChannel('Radio 101')
+virginradio = MediasetChannel('Virgin Radio')
+radiomontecarlo = MediasetChannel('Radio Monte Carlo')
 
 # La7
 la7 = La7()
 la7d = La7d()
-
 
 # Paramount Channel
 paramount = ParamountChannel()
