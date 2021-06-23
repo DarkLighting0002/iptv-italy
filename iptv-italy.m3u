@@ -35,7 +35,7 @@ https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(ki)/
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(fu)/index.m3u8
 #EXTINF: -1 channel-number="15" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/kq.png" tvg-id="kq" tvg-name="Mediaset Extra" , Mediaset Extra
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(kq)/index.m3u8
-#EXTINF: -1 channel-number="16" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/lb.png" tvg-id="lb" tvg-name="Canale 20" , Canale 20
+#EXTINF: -1 channel-number="16" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/lb.png" tvg-id="lb" tvg-name="20" , 20
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(lb)/index.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF: -1 channel-number="17" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/raipremium.png" tvg-id="raipremium" tvg-name="Rai Premium" , Rai Premium
@@ -53,9 +53,9 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746953
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(kb)/index.m3u8
 #EXTINF: -1 channel-number="22" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/la.png" tvg-id="la" tvg-name="Cartoonito" , Cartoonito
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(la)/index.m3u8
-#EXTINF: -1 channel-number="23" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/b6.png" tvg-id="b6" tvg-name="Cine 34" , Cine 34
+#EXTINF: -1 channel-number="23" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/b6.png" tvg-id="b6" tvg-name="Cine34" , Cine34
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(b6)/index.m3u8
-#EXTINF: -1 channel-number="24" tvg-id="paramountchannel" tvg-name="Paramount Channel" , Paramount Channel
+#EXTINF: -1 channel-number="24" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/paramountnetwork.png" tvg-id="paramountnetwork" tvg-name="Paramount Network" , Paramount Network
 http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF: -1 channel-number="25" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rainews24.png" tvg-id="rainews24" tvg-name="Rai News 24" , Rai News 24

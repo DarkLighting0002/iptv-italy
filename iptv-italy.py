@@ -130,10 +130,10 @@ class MediasetChannel(Channel):
         'Rete 4': 'r4',
         'Canale 5': 'c5',
         'Italia 1': 'i1',
-        'Canale 20': 'lb',
+        '20': 'lb',
         'La5': 'ka',
         'Italia 2': 'i2',
-        'Cine 34': 'b6',
+        'Cine34': 'b6',
         'Mediaset Extra': 'kq',
         'Focus': 'fu',
         'Top Crime': 'lt',
@@ -163,9 +163,9 @@ class MediasetChannel(Channel):
         self.logo = WEBPATH + '/logos/{}.png'.format(self.id)
 
 
-class ParamountChannel(Channel):
+class ParamountNetwork(Channel):
     """
-    Abstraction for a Paramount channel.
+    Abstraction for the Paramount Network.
     """
     def __init__(self, number=None):
         """
@@ -175,10 +175,10 @@ class ParamountChannel(Channel):
             number (int): number of the channel
         """
         super().__init__()
-        self.name = 'Paramount Channel'
+        self.name = 'Paramount Network'
         self.number = number
         self.chUrl = 'http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8'
-
+        self.logo = WEBPATH + '/logos/paramountnetwork.png'
 
 class La7(Channel):
     """
@@ -274,10 +274,10 @@ rairadio2 = RaiChannel('Rai Radio 2')
 rete4 = MediasetChannel('Rete 4', 4)
 canale5 = MediasetChannel('Canale 5', 5)
 italia1 = MediasetChannel('Italia 1', 6)
-canale20 = MediasetChannel('Canale 20')
+canale20 = MediasetChannel('20')
 la5 = MediasetChannel('La5')
 italia2 = MediasetChannel('Italia 2')
-cine34 = MediasetChannel('Cine 34')
+cine34 = MediasetChannel('Cine34')
 medextra = MediasetChannel('Mediaset Extra')
 focus = MediasetChannel('Focus')
 topcrime = MediasetChannel('Top Crime')
@@ -295,7 +295,7 @@ la7 = La7()
 la7d = La7d()
 
 # Paramount Channel
-paramount = ParamountChannel()
+paramount = ParamountNetwork()
 
 
 if __name__ == '__main__':
