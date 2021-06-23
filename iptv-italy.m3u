@@ -12,8 +12,8 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=308709
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(r4)/index.m3u8
 #EXTINF: -1 channel-number="5" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/c5.png" tvg-id="c5" tvg-name="Canale 5" , Canale 5
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(c5)/index.m3u8
-#EXTINF: -1 channel-number="6" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/i6.png" tvg-id="i6" tvg-name="Italia 1" , Italia 1
-https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(i6)/index.m3u8
+#EXTINF: -1 channel-number="6" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/i1.png" tvg-id="i1" tvg-name="Italia 1" , Italia 1
+https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(i1)/index.m3u8
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF: -1 channel-number="7" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rai4.png" tvg-id="rai4" tvg-name="Rai 4" , Rai 4
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=746966

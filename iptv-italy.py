@@ -129,7 +129,7 @@ class MediasetChannel(Channel):
     NAME_ID = {
         'Rete 4': 'r4',
         'Canale 5': 'c5',
-        'Italia 1': 'i6',
+        'Italia 1': 'i1',
         'Canale 20': 'lb',
         'La5': 'ka',
         'Italia 2': 'i2',
