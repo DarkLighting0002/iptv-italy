@@ -63,7 +63,7 @@ class Channel:
         return self.lines
 
 
-class RaiChannel(Channel):
+class Rai(Channel):
     """
     Abstraction for a Rai channel.
     """
@@ -92,7 +92,6 @@ class RaiChannel(Channel):
 
         Arguments:
             name (string)   : name of the channel (e.g. 'Rai 1')
-            id (string)     : id of the channel (e.g. 'rai1')
             number (int)    : number of the channel (e.g. 1)
             webpath (string): path to the logos directory (the name of the logo
                               is by default set to '<id>.png')
@@ -102,10 +101,7 @@ class RaiChannel(Channel):
             self.name = name
         else:
             raise Exception('channel {} does not exist!'.format(name))
-        if id is not None:
-            self.id = id
-        else:
-            self.id = self.CHANNELS[self.name].get('id')
+        self.id = self.CHANNELS[self.name].get('id')
         if number is not None:
             self.number = number
         else:
@@ -133,7 +129,7 @@ class RaiChannel(Channel):
         return super().M3ULines()
 
 
-class MediasetChannel(Channel):
+class Mediaset(Channel):
     """
     Abstraction for a Mediaset channel.
     """
@@ -165,7 +161,6 @@ class MediasetChannel(Channel):
 
         Arguments:
             name (string)   : name of the channel (e.g. 'Rai 1')
-            id (string)     : id of the channel (e.g. 'rai1')
             number (int)    : number of the channel (e.g. 1)
             webpath (string): path to the logos directory (the name of the logo
                               is by default set to '<id>.png')
@@ -175,10 +170,7 @@ class MediasetChannel(Channel):
             self.name = name
         else:
             raise Exception('channel {} does not exist!'.format(name))
-        if id is not None:
-            self.id = id
-        else:
-            self.id = self.CHANNELS[self.name].get('id')
+        self.id = self.CHANNELS[self.name].get('id')
         if number is not None:
             self.number = number
         else:
@@ -191,7 +183,7 @@ class ParamountNetwork(Channel):
     """
     Abstraction for the Paramount Network.
     """
-    def __init__(self, id='paramountchannel', number=27, logo=WEBPATH + '/logos'):
+    def __init__(self, id='paramountnetwork', number=27, logo=WEBPATH + '/logos'):
         """
         Initialize the Paramount streaming channel and load playlist.
 
@@ -209,6 +201,40 @@ class ParamountNetwork(Channel):
         self.chUrl = 'http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8'
 
 
+class Sky(Channel):
+    """
+    Abstraction for Sky channel.
+    """
+
+    CHANNELS = {
+        'Sky TG24': {'id': 1, 'number': 50},
+        'Cielo': {'id': 2, 'number': 26}
+    }
+
+    def __init__(self, name, number=None, logo=WEBPATH + '/logos'):
+        """
+        Initialize the Cielo streaming channel and load playlist.
+
+        Arguments:
+            name (string)   : name of the channel (e.g. 'Rai 1')
+            number (int)    : number of the channel (e.g. 1)
+            webpath (string): path to the logos directory (the name of the logo
+                              is by default set to '<id>.png')
+        """
+        super().__init__()
+        if name in self.CHANNELS.keys():
+            self.name = name
+        else:
+            raise Exception('channel {} does not exist!'.format(name))
+        self.id = self.CHANNELS[self.name].get('id')
+        if number is not None:
+            self.number = number
+        else:
+            self.number = self.CHANNELS[self.name].get('number')
+        self.logo = logo + '/{}.png'.format(self.id)
+        self.chUrl = 'https://apid.sky.it/vdp/v1/getLivestream?id={}&isMobile=false'.format(self.id)
+
+
 class La7(Channel):
     """
     Abstraction for a La7 channel.
@@ -219,7 +245,7 @@ class La7(Channel):
         'La7d': {'id': 'LA7D', 'number': 29}
     }
 
-    def __init__(self, name, id=None, number=None, logo=WEBPATH + '/logos'):
+    def __init__(self, name, number=None, logo=WEBPATH + '/logos'):
         """
         Initialize the La7 streaming channel and load playlist.
 
@@ -235,27 +261,13 @@ class La7(Channel):
             self.name = name
         else:
             raise Exception('channel {} does not exist!'.format(name))
-        if id is not None:
-            self.id = id
-        else:
-            self.id = self.CHANNELS[self.name].get('id')
+        self.id = self.CHANNELS[self.name].get('id')
         if number is not None:
             self.number = number
         else:
             self.number = self.CHANNELS[self.name].get('number')
         self.logo = logo + '/{}.png'.format(self.id)
         self.chUrl = 'https://d15umi5iaezxgx.cloudfront.net/{}/DRM/HLS/Live.m3u8'.format(self.id)      
-
-
-class Cielo(Channel):
-    """
-    Abstraction for Cielo channel.
-    """
-    def __init__(self):
-        """
-        
-        """
-        super().__init__()
 
 
 class M3U:
@@ -299,12 +311,16 @@ if __name__ == '__main__':
     m3u = M3U('{}/iptv-italy.m3u'.format(script_dir))
 
     # Add Rai channels
-    for ch_name in RaiChannel.CHANNELS.keys():
-        m3u.addChannel(RaiChannel(ch_name))
+    for ch_name in Rai.CHANNELS.keys():
+        m3u.addChannel(Rai(ch_name))
 
     # Add Mediaset channels
-    for ch_name in MediasetChannel.CHANNELS.keys():
-        m3u.addChannel(MediasetChannel(ch_name))
+    for ch_name in Mediaset.CHANNELS.keys():
+        m3u.addChannel(Mediaset(ch_name))
+
+    # Add Sky channels
+    for ch_name in Sky.CHANNELS.keys():
+        m3u.addChannel(Sky(ch_name))
 
     # Add Paramount channel
     m3u.addChannel(ParamountNetwork())
