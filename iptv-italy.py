@@ -47,7 +47,7 @@ class Channel:
         """
         self.lines.append('#EXTINF: -1 ')
         if self.number is not None:
-            self.lines.append('channel-number="{}" '.format(self.number))
+            self.lines.append('tvg-chno="{}" '.format(self.number))
         if self.logo is not None:
             self.lines.append('tvg-logo="{}" '.format(self.logo))
         if self.id is not None:
