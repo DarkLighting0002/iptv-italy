@@ -3,7 +3,7 @@ This repository contains a collection of **free** and **legal** italian IPTV cha
 - [*Rai*](https://www.raiplay.it/dirette)
 - [*Mediaset*](https://www.mediasetplay.mediaset.it/diretta)
 - [*Paramount Network*](https://www.paramountnetwork.it/diretta-tv/wp5pr2)
-- [*Cielo*](https://www.cielotv.it/streaming.html) and [*Sky TG24*](https://video.sky.it/diretta/tg24)
+- [*Cielo*](https://www.cielotv.it/streaming.html) and [*Sky TG24*](https://video.sky.it/diretta/tg24) both provided by *Sky*
 
 The list is designed to be as stable as possible and it is compliant with the [*M3U*](https://en.wikipedia.org/wiki/M3U) standard. However, changes in the streaming settings in the websites of the aforementioned companies may prevent the current configuration from working. This list will be maintained to keep up with this possible changes but no guarantee is given in this sense. Together with the M3U list, the Python script used to generate the list is provided.
 
@@ -11,6 +11,16 @@ The list is designed to be as stable as possible and it is compliant with the [*
 To install the M3U playlist in the IPTV player, please use the following URL:
 ```
 https://jurijnota.github.io/iptv-italy/iptv-italy.m3u
+```
+
+### Advanced Usage
+Some streaming channels (e.g. *Cielo* and *Sky TG24*) have cookies features that prevent a simple retrieval of the M3U lists. To circumvent, this issue we provide a very simple proxy server which listens for HTTP connections on `127.0.0.1:80`. Therefore, in order to watch these channels, one should first execute the proxy server using
+```
+sudo python3 proxy.py
+```
+or
+```
+sudo ./proxy.py
 ```
 
 ## Known issues
