@@ -41,8 +41,9 @@
     },
     "Sky":
     {
-        "Sky TG24": {"id": "1", "number": 50},
-        "Cielo": {"id": "2", "number": 26}
+        "Sky TG24": {"id": "9", "number": 50},
+        "Cielo": {"id": "2", "number": 26},
+        "TV8": {"id": "7", "number": 8}
     },
     "Paramount":
     {

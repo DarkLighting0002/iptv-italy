@@ -80,9 +80,11 @@ https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(er)/
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(ew)/index.m3u8
 #EXTINF: -1 tvg-chno="772" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/bb.png" tvg-id="bb" tvg-name="Radio Monte Carlo" , Radio Monte Carlo
 https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(bb)/index.m3u8
-#EXTINF: -1 tvg-chno="50" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/1.png" tvg-id="1" tvg-name="Sky TG24" , Sky TG24
-http://127.0.0.1/?id=1
+#EXTINF: -1 tvg-chno="50" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/9.png" tvg-id="9" tvg-name="Sky TG24" , Sky TG24
+http://127.0.0.1/?id=9
 #EXTINF: -1 tvg-chno="26" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/2.png" tvg-id="2" tvg-name="Cielo" , Cielo
 http://127.0.0.1/?id=2
+#EXTINF: -1 tvg-chno="8" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/7.png" tvg-id="7" tvg-name="TV8" , TV8
+http://127.0.0.1/?id=7
 #EXTINF: -1 tvg-chno="27" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/paramountnetwork.png" tvg-id="paramountnetwork" tvg-name="ParamountNetwork" , ParamountNetwork
 http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8
