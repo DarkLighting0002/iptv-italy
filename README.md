@@ -1,9 +1,10 @@
 # iptv-italy
-This repository contains a collection of **free** and **legal** italian IPTV channels which were retrieved from the official websites of the major TV companies:
+This repository contains a collection of **free** and **legal** italian IPTV channels which were retrieved from the official websites of the following TV companies:
 - [*Rai*](https://www.raiplay.it/dirette)
 - [*Mediaset*](https://www.mediasetplay.mediaset.it/diretta)
 - [*Paramount Network*](https://www.paramountnetwork.it/diretta-tv/wp5pr2)
 - [*Cielo*](https://www.cielotv.it/streaming.html) and [*Sky TG24*](https://video.sky.it/diretta/tg24) both provided by *Sky*
+- [*TG Norba 24*](http://www.norbaonline.it/live.php?diretta=tgnorba)
 
 The list is designed to be as stable as possible and it is compliant with the [*M3U*](https://en.wikipedia.org/wiki/M3U) standard. However, changes in the streaming settings in the websites of the aforementioned companies may prevent the current configuration from working. This list will be maintained to keep up with this possible changes but no guarantee is given in this sense. Together with the M3U list, the Python script used to generate the list is provided.
 

@@ -181,7 +181,7 @@ class Paramount(Channel):
 
 class Sky(Channel):
     """
-    Abstraction for Sky channel.
+    Abstraction for Sky channels.
     """
 
     CHANNELS = CHANNELS['Sky']
@@ -208,6 +208,37 @@ class Sky(Channel):
             self.number = self.CHANNELS[self.name].get('number')
         self.logo = logo + '/{}.png'.format(self.id)
         self.chUrl = 'http://127.0.0.1/?id={}'.format(self.id)
+
+
+class Norba(Channel):
+    """
+    Abstraction for Norba channels.
+    """
+
+    CHANNELS = CHANNELS['Norba']
+
+    def __init__(self, name, number=None, logo=WEBPATH + '/logos'):
+        """
+        Initialize the Cielo streaming channel and load playlist.
+
+        Arguments:
+            name (string)   : name of the channel (e.g. 'Rai 1')
+            number (int)    : number of the channel (e.g. 1)
+            webpath (string): path to the logos directory (the name of the logo
+                              is by default set to '<id>.png')
+        """
+        super().__init__()
+        if name in self.CHANNELS.keys():
+            self.name = name
+        else:
+            raise Exception('channel {} does not exist!'.format(name))
+        self.id = self.CHANNELS[self.name].get('id')
+        if number is not None:
+            self.number = number
+        else:
+            self.number = self.CHANNELS[self.name].get('number')
+        self.logo = logo + '/{}.png'.format(self.id)
+        self.chUrl = 'https://flash5.xdevel.com/tgnorba_24/smil:tgnorba_24.smil/playlist.m3u8'
 
 
 class La7(Channel):
@@ -293,8 +324,12 @@ if __name__ == '__main__':
     for ch_name in Sky.CHANNELS.keys():
         m3u.addChannel(Sky(ch_name))
 
-    # Add Paramount channel
+    # Add Paramount channels
     for ch_name in Paramount.CHANNELS.keys():
         m3u.addChannel(Paramount(ch_name))
+
+    # Add Norba channels
+    for ch_name in Norba.CHANNELS.keys():
+        m3u.addChannel(Norba(ch_name))
 
     m3u.dump()

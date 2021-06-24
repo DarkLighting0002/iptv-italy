@@ -53,5 +53,9 @@
     {
         "La7": {"id": "LA7", "number": 7},
         "La7d": {"id": "LA7D", "number": 29}
+    },
+    "Norba":
+    {
+        "TG Norba 24": {"id": "tgnorba24", "number": 180}
     }
 }
