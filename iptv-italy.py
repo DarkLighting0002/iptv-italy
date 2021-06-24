@@ -5,6 +5,10 @@ import requests as req
 
 
 WEBPATH = 'https://jurijnota.github.io/iptv-italy'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
+
+with open('{}/channels.json'.format(SCRIPT_DIR), 'r') as f:
+    CHANNELS = json.load(f)
 
 
 ## Utils
@@ -68,23 +72,7 @@ class Rai(Channel):
     Abstraction for a Rai channel.
     """
 
-    CHANNELS = {
-        'Rai 1': {'id': 'rai1', 'number': 1},
-        'Rai 2': {'id': 'rai2', 'number': 2},
-        'Rai 3': {'id': 'rai3', 'number': 3},
-        'Rai 4': {'id': 'rai4', 'number': 21},
-        'Rai 5': {'id': 'rai5', 'number': 23},
-        'Rai Movie': {'id': 'raimovie', 'number': 24},
-        'Rai Premium': {'id': 'raipremium', 'number': 25},
-        'Rai Storia': {'id': 'raistoria', 'number': 54},
-        'Rai Yoyo': {'id': 'raiyoyo', 'number': 43},
-        'Rai Gulp': {'id': 'raigulp', 'number': 42},
-        'Rai News 24': {'id': 'rainews24', 'number': 48},
-        'Rai Sport Piu HD': {'id': 'raisportpiuhd', 'number': 57},
-        'Rai Sport': {'id': 'raisport', 'number': 58},
-        'Rai Scuola': {'id': 'raiscuola', 'number': 146},
-        'Rai Radio 2': {'id': 'rairadio2', 'number': 156}
-    }
+    CHANNELS = CHANNELS['Rai']
 
     def __init__(self, name, id=None, number=None, logo=WEBPATH + '/logos'):
         """
@@ -134,26 +122,7 @@ class Mediaset(Channel):
     Abstraction for a Mediaset channel.
     """
 
-    CHANNELS = {
-        'Rete 4': {'id': 'r4', 'number': 4},
-        'Canale 5': {'id': 'c5', 'number': 5},
-        'Italia 1': {'id': 'i1', 'number': 6},
-        '20': {'id': 'lb', 'number': 20},
-        'La5': {'id': 'ka', 'number': 30},
-        'Italia 2': {'id': 'i2', 'number': 66},
-        'Cine34': {'id': 'b6', 'number': 34},
-        'Mediaset Extra': {'id':'kq', 'number': 55},
-        'Focus': {'id': 'fu', 'number': 35},
-        'Top Crime': {'id': 'lt', 'number': 39},
-        'Iris': {'id': 'ki', 'number': 22},
-        'Boing': {'id': 'kb', 'number': 40},
-        'Cartoonito': {'id': 'la', 'number': 46},
-        'TGcom24': {'id': 'kf', 'number': 51},
-        'Radio 105': {'id': 'ec', 'number': 157},
-        'Radio 101': {'id': 'er', 'number': 167},
-        'Virgin Radio': {'id': 'ew', 'number': 257},
-        'Radio Monte Carlo': {'id': 'bb', 'number': 772}
-    }
+    CHANNELS = CHANNELS['Mediaset']
 
     def __init__(self, name, id=None, number=None, logo=WEBPATH + '/logos'):
         """
@@ -179,24 +148,33 @@ class Mediaset(Channel):
         self.chUrl = 'https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel({})/index.m3u8'.format(self.id)
 
 
-class ParamountNetwork(Channel):
+class Paramount(Channel):
     """
-    Abstraction for the Paramount Network.
+    Abstraction for the Paramount channel.
     """
-    def __init__(self, id='paramountnetwork', number=27, logo=WEBPATH + '/logos'):
+
+    CHANNELS = CHANNELS['Paramount']
+
+    def __init__(self, name, number=27, logo=WEBPATH + '/logos'):
         """
         Initialize the Paramount streaming channel and load playlist.
 
         Arguments:
-            id (string)     : id of the channel (e.g. 'rai1')
+            name (string)   : name of the channel (e.g. 'Rai 1')
             number (int)    : number of the channel (e.g. 1)
             webpath (string): path to the logos directory (the name of the logo
                               is by default set to '<id>.png')
         """
         super().__init__()
-        self.name = 'Paramount Network'
-        self.id = id
-        self.number = number
+        if name in self.CHANNELS.keys():
+            self.name = name
+        else:
+            raise Exception('channel {} does not exist!'.format(name))
+        self.id = self.CHANNELS[self.name].get('id')
+        if number is not None:
+            self.number = number
+        else:
+            self.number = self.CHANNELS[self.name].get('number')
         self.logo = logo + '/{}.png'.format(self.id)
         self.chUrl = 'http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8'
 
@@ -206,10 +184,7 @@ class Sky(Channel):
     Abstraction for Sky channel.
     """
 
-    CHANNELS = {
-        'Sky TG24': {'id': 1, 'number': 50},
-        'Cielo': {'id': 2, 'number': 26}
-    }
+    CHANNELS = CHANNELS['Sky']
 
     def __init__(self, name, number=None, logo=WEBPATH + '/logos'):
         """
@@ -232,7 +207,7 @@ class Sky(Channel):
         else:
             self.number = self.CHANNELS[self.name].get('number')
         self.logo = logo + '/{}.png'.format(self.id)
-        self.chUrl = 'https://apid.sky.it/vdp/v1/getLivestream?id={}&isMobile=false'.format(self.id)
+        self.chUrl = 'http://127.0.0.1/?id={}'.format(self.id)
 
 
 class La7(Channel):
@@ -240,10 +215,7 @@ class La7(Channel):
     Abstraction for a La7 channel.
     """
 
-    CHANNELS = {
-        'La7': {'id': 'LA7', 'number': 7},
-        'La7d': {'id': 'LA7D', 'number': 29}
-    }
+    CHANNELS = CHANNELS['La7']
 
     def __init__(self, name, number=None, logo=WEBPATH + '/logos'):
         """
@@ -307,8 +279,7 @@ class M3U:
 
 if __name__ == '__main__':
 
-    script_dir = os.path.dirname(os.path.realpath(__file__))
-    m3u = M3U('{}/iptv-italy.m3u'.format(script_dir))
+    m3u = M3U('{}/iptv-italy.m3u'.format(SCRIPT_DIR))
 
     # Add Rai channels
     for ch_name in Rai.CHANNELS.keys():
@@ -323,6 +294,7 @@ if __name__ == '__main__':
         m3u.addChannel(Sky(ch_name))
 
     # Add Paramount channel
-    m3u.addChannel(ParamountNetwork())
+    for ch_name in Paramount.CHANNELS.keys():
+        m3u.addChannel(Paramount(ch_name))
 
     m3u.dump()

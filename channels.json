@@ -1,0 +1,56 @@
+
+{
+    "Rai":
+    {
+        "Rai 1": {"id": "rai1", "number": 1},
+        "Rai 2": {"id": "rai2", "number": 2},
+        "Rai 3": {"id": "rai3", "number": 3},
+        "Rai 4": {"id": "rai4", "number": 21},
+        "Rai 5": {"id": "rai5", "number": 23},
+        "Rai Movie": {"id": "raimovie", "number": 24},
+        "Rai Premium": {"id": "raipremium", "number": 25},
+        "Rai Storia": {"id": "raistoria", "number": 54},
+        "Rai Yoyo": {"id": "raiyoyo", "number": 43},
+        "Rai Gulp": {"id": "raigulp", "number": 42},
+        "Rai News 24": {"id": "rainews24", "number": 48},
+        "Rai Sport Piu HD": {"id": "raisportpiuhd", "number": 57},
+        "Rai Sport": {"id": "raisport", "number": 58},
+        "Rai Scuola": {"id": "raiscuola", "number": 146},
+        "Rai Radio 2": {"id": "rairadio2", "number": 156}
+    },
+    "Mediaset":
+    {
+        "Rete 4": {"id": "r4", "number": 4},
+        "Canale 5": {"id": "c5", "number": 5},
+        "Italia 1": {"id": "i1", "number": 6},
+        "20": {"id": "lb", "number": 20},
+        "La5": {"id": "ka", "number": 30},
+        "Italia 2": {"id": "i2", "number": 66},
+        "Cine34": {"id": "b6", "number": 34},
+        "Mediaset Extra": {"id":"kq", "number": 55},
+        "Focus": {"id": "fu", "number": 35},
+        "Top Crime": {"id": "lt", "number": 39},
+        "Iris": {"id": "ki", "number": 22},
+        "Boing": {"id": "kb", "number": 40},
+        "Cartoonito": {"id": "la", "number": 46},
+        "TGcom24": {"id": "kf", "number": 51},
+        "Radio 105": {"id": "ec", "number": 157},
+        "Radio 101": {"id": "er", "number": 167},
+        "Virgin Radio": {"id": "ew", "number": 257},
+        "Radio Monte Carlo": {"id": "bb", "number": 772}
+    },
+    "Sky":
+    {
+        "Sky TG24": {"id": "1", "number": 50},
+        "Cielo": {"id": "2", "number": 26}
+    },
+    "Paramount":
+    {
+        "ParamountNetwork": {"id": "paramountnetwork", "number": "27"}
+    },
+    "La7":
+    {
+        "La7": {"id": "LA7", "number": 7},
+        "La7d": {"id": "LA7D", "number": 29}
+    }
+}
