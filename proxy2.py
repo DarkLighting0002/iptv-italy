@@ -61,6 +61,6 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
 
 
 if __name__ == '__main__':
-    with SocketServer.TCPServer((LISTEN_ADDR, PORT), HTTPRequestHandler) as httpd:
-        print("serving at port", PORT)
-        httpd.serve_forever()
+    httpd = SocketServer.TCPServer((LISTEN_ADDR, PORT), HTTPRequestHandler)
+    print "serving at port {}".format(PORT)
+    httpd.serve_forever()
