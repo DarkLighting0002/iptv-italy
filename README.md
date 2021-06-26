@@ -45,6 +45,7 @@ No specific requirements are needed to use this M3U playlist, however the follow
 | [`http.server`](https://docs.python.org/3.9/library/http.server.html) | [`BaseHTTPServer`](https://docs.python.org/2.7/library/basehttpserver.html) |
 
 Of these requirements only `requests` may be missing. Please install it using one of the following commands depending on the installed version of Python.
+
 For **Python 3**
 ```
 sudo python3 -m pip install requests
@@ -56,6 +57,7 @@ sudo python2 -m pip install requests
 
 ### `pip` missing
 May the `pip` module be missing on your device, please use these commands to download and install it.
+
 For **Python 3**:
 ```
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
