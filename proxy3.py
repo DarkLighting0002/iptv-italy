@@ -7,7 +7,7 @@ import socketserver
 from http.server import BaseHTTPRequestHandler
 
 
-PORT = 80
+PORT = 10293
 LISTEN_ADDR = '127.0.0.1'
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__))
 

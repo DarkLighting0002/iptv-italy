@@ -207,7 +207,7 @@ class Sky(Channel):
         else:
             self.number = self.CHANNELS[self.name].get('number')
         self.logo = logo + '/{}.png'.format(self.id)
-        self.chUrl = 'http://127.0.0.1/?id={}'.format(self.id)
+        self.chUrl = 'http://127.0.0.1:10293/?id={}'.format(self.id)
 
 
 class Norba(Channel):
