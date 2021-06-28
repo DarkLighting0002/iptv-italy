@@ -117,6 +117,48 @@ class Rai(Channel):
         return super().M3ULines()
 
 
+class TGR(Channel):
+    """
+    Abstraction for a TGR channel.
+    """
+    #https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668697
+
+    #CHANNELS = CHANNELS['TGR']
+
+    def __init__(self, name, id=None, number=None, logo=WEBPATH + '/logos'):
+        """
+        Initialize the Rai streaming channel and load playlist.
+
+        Arguments:
+            name (string)   : name of the channel (e.g. 'Rai 1')
+            number (int)    : number of the channel (e.g. 1)
+            webpath (string): path to the logos directory (the name of the logo
+                              is by default set to '<id>.png')
+        """
+        super().__init__()
+        if name in self.CHANNELS.keys():
+            self.name = name
+        else:
+            raise Exception('channel {} does not exist!'.format(name))
+        self.id = self.CHANNELS[self.name].get('id')
+        if number is not None:
+            self.number = number
+        else:
+            self.number = self.CHANNELS[self.name].get('number')
+        self.logo = logo + '/{}.png'.format(self.id)
+
+        # Get playlists URL
+        jsonUrl = 'https://www.raiplay.it/dirette/{}.json'.format(self.id)
+        jsonReq = req.get(jsonUrl)
+        if not jsonReq.ok:
+            raise Exception('connection error {}'.format(jsonReq.status_code))
+        chJson = json.loads(jsonReq.text)
+        if 'video' not in chJson.keys():
+            raise Exception('Cannot retrieve channel M3U!')
+        elif 'content_url' not in chJson['video'].keys():
+            raise Exception('Cannot retrieve channel M3U!')
+        self.chUrl = chJson['video']['content_url']
+
 class Mediaset(Channel):
     """
     Abstraction for a Mediaset channel.
@@ -176,7 +218,7 @@ class Paramount(Channel):
         else:
             self.number = self.CHANNELS[self.name].get('number')
         self.logo = logo + '/{}.png'.format(self.id)
-        self.chUrl = 'http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8'
+        self.chUrl = 'http://127.0.0.1:10293/?id={}'.format(self.id)
 
 
 class Sky(Channel):

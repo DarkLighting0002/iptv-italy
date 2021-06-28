@@ -43,24 +43,54 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
                 self.send_header('Location', chJson['streaming_url'])
                 self.end_headers()
 
+    def Paramount_proxy(self, id):
+        """
+        Handle Paramount channels proxying. The first link
+        in the Paramount Network master playlist is broken, this
+        mirror just deletes it.
+        """
+        chUrl = 'http://viacomitalytest-lh.akamaihd.net/i/sbshdlive_1@195657/master.m3u8'
+        chReq = req.get(chUrl)
+        if not chReq.ok:
+            self.send_response(chReq.status_code)
+            self.end_headers()
+            self.wfile.write(chReq.content)
+        else:
+            body = ''
+            lines = chReq.text.split('\n')
+            # Remove line 1 and 2
+            lines.pop(1)
+            lines.pop(1)
+            for line in lines:
+                body += line + '\n'
+            self.send_response(200)
+            self.end_headers()
+            self.wfile.write(body.encode(encoding='UTF-8'))
+
     def do_GET(self):
         # Get queries from the request
         queries = dict(_streamIdRegex.findall(self.path))
         stream_id = str(queries.get('id'))
 
-        for key, value in CHANNELS.get('Sky', {}).items():
+        for value in CHANNELS.get('Sky', {}).values():
             id = value.get('id')
             if stream_id == id:
                 self.Sky_proxy(id)
                 break
         else:
-            self.send_response(404)
-            self.end_headers()
-            body = 'Could not find streaming id {}.'.format(stream_id)
-            self.wfile.write(body.encode(encoding='UTF-8'))
+            for value in CHANNELS.get('Paramount', {}).values():
+                id = value.get('id')
+                if stream_id == id:
+                    self.Paramount_proxy(id)
+                    break
+            else:
+                self.send_response(404)
+                self.end_headers()
+                body = 'Could not find streaming id {}.'.format(stream_id)
+                self.wfile.write(body.encode(encoding='UTF-8'))
 
 
 if __name__ == '__main__':
     httpd = SocketServer.TCPServer((LISTEN_ADDR, PORT), HTTPRequestHandler)
-    print("serving at port {}".format(PORT))
+    print('serving at port {}'.format(PORT))
     httpd.serve_forever()
