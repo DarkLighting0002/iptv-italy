@@ -74,7 +74,7 @@ class Rai(Channel):
 
     CHANNELS = CHANNELS['Rai']
 
-    def __init__(self, name, id=None, number=None, logo=WEBPATH + '/logos'):
+    def __init__(self, name, number=None, logo=WEBPATH + '/logos'):
         """
         Initialize the Rai streaming channel and load playlist.
 
@@ -121,11 +121,10 @@ class TGR(Channel):
     """
     Abstraction for a TGR channel.
     """
-    #https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668697
 
-    #CHANNELS = CHANNELS['TGR']
+    CHANNELS = CHANNELS['TGR']
 
-    def __init__(self, name, id=None, number=None, logo=WEBPATH + '/logos'):
+    def __init__(self, name, number=None, logo=WEBPATH + '/logos'):
         """
         Initialize the Rai streaming channel and load playlist.
 
@@ -145,19 +144,11 @@ class TGR(Channel):
             self.number = number
         else:
             self.number = self.CHANNELS[self.name].get('number')
-        self.logo = logo + '/{}.png'.format(self.id)
+        self.logo = logo + '/tgr.png'
 
         # Get playlists URL
-        jsonUrl = 'https://www.raiplay.it/dirette/{}.json'.format(self.id)
-        jsonReq = req.get(jsonUrl)
-        if not jsonReq.ok:
-            raise Exception('connection error {}'.format(jsonReq.status_code))
-        chJson = json.loads(jsonReq.text)
-        if 'video' not in chJson.keys():
-            raise Exception('Cannot retrieve channel M3U!')
-        elif 'content_url' not in chJson['video'].keys():
-            raise Exception('Cannot retrieve channel M3U!')
-        self.chUrl = chJson['video']['content_url']
+        self.chUrl = 'https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont={}'.format(self.id)
+
 
 class Mediaset(Channel):
     """
@@ -166,7 +157,7 @@ class Mediaset(Channel):
 
     CHANNELS = CHANNELS['Mediaset']
 
-    def __init__(self, name, id=None, number=None, logo=WEBPATH + '/logos'):
+    def __init__(self, name, number=None, logo=WEBPATH + '/logos'):
         """
         Initialize the Mediaset streaming channel and load playlist.
 
@@ -373,5 +364,9 @@ if __name__ == '__main__':
     # Add Norba channels
     for ch_name in Norba.CHANNELS.keys():
         m3u.addChannel(Norba(ch_name))
+
+    # Add TGR Live streaming
+    for ch_name in TGR.CHANNELS.keys():
+        m3u.addChannel(TGR(ch_name))
 
     m3u.dump()

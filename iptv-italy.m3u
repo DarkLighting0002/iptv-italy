@@ -90,3 +90,45 @@ http://127.0.0.1:10293/?id=7
 http://127.0.0.1:10293/?id=paramountnetwork
 #EXTINF: -1 tvg-chno="180" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgnorba24.png" tvg-id="tgnorba24" tvg-name="TG Norba 24" , TG Norba 24
 https://flash5.xdevel.com/tgnorba_24/smil:tgnorba_24.smil/playlist.m3u8
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="667302" tvg-name="TGR Abruzzo" , TGR Abruzzo
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=667302
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668458" tvg-name="TGR Basilicata" , TGR Basilicata
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668458
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668710" tvg-name="TGR Bolzano" , TGR Bolzano
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668710
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668460" tvg-name="TGR Calabria" , TGR Calabria
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668460
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668461" tvg-name="TGR Campania" , TGR Campania
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668461
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668648" tvg-name="TGR Emilia Romagna" , TGR Emilia Romagna
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668648
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668651" tvg-name="TGR Friuli Venezia Giulia" , TGR Friuli Venezia Giulia
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668651
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668666" tvg-name="TGR Lazio" , TGR Lazio
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668666
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668667" tvg-name="TGR Liguria" , TGR Liguria
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668667
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668685" tvg-name="TGR Lombardia" , TGR Lombardia
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668685
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668686" tvg-name="TGR Marche" , TGR Marche
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668686
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668691" tvg-name="TGR Molise" , TGR Molise
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668691
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668692" tvg-name="TGR Piemonte" , TGR Piemonte
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668692
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668697" tvg-name="TGR Puglia" , TGR Puglia
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668697
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668699" tvg-name="TGR Sardegna" , TGR Sardegna
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668699
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668707" tvg-name="TGR Sicilia" , TGR Sicilia
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668707
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668709" tvg-name="TGR Toscana" , TGR Toscana
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668709
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="739016" tvg-name="TGR Trento" , TGR Trento
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=739016
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668711" tvg-name="TGR Umbria" , TGR Umbria
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668711
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668726" tvg-name="TGR Val D'Aosta" , TGR Val D'Aosta
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668726
+#EXTINF: -1 tvg-logo="https://jurijnota.github.io/iptv-italy/logos/tgr.png" tvg-id="668727" tvg-name="TGR Veneto" , TGR Veneto
+https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=668727

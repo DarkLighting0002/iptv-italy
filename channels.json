@@ -57,5 +57,29 @@
     "Norba":
     {
         "TG Norba 24": {"id": "tgnorba24", "number": 180}
+    },
+    "TGR":
+    {
+        "TGR Abruzzo": {"id": "667302"},
+        "TGR Basilicata": {"id": "668458"},
+        "TGR Bolzano": {"id": "668710"},
+        "TGR Calabria": {"id": "668460"},
+        "TGR Campania": {"id": "668461"},
+        "TGR Emilia Romagna": {"id": "668648"},
+        "TGR Friuli Venezia Giulia": {"id": "668651"},
+        "TGR Lazio": {"id": "668666"},
+        "TGR Liguria": {"id": "668667"},
+        "TGR Lombardia": {"id": "668685"},
+        "TGR Marche": {"id": "668686"},
+        "TGR Molise": {"id": "668691"},
+        "TGR Piemonte": {"id": "668692"},
+        "TGR Puglia": {"id": "668697"},
+        "TGR Sardegna": {"id": "668699"},
+        "TGR Sicilia": {"id": "668707"},
+        "TGR Toscana": {"id": "668709"},
+        "TGR Trento": {"id": "739016"},
+        "TGR Umbria": {"id": "668711"},
+        "TGR Val D'Aosta": {"id": "668726"},
+        "TGR Veneto": {"id": "668727"}
     }
 }
