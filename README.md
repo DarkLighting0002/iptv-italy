@@ -15,7 +15,7 @@ https://jurijnota.github.io/iptv-italy/iptv-italy.m3u
 ```
 
 ### Advanced Usage
-Some streaming channels (e.g. *Cielo*, *Sky TG24* and *TV8*) have cookies features that prevent a simple retrieval of the M3U lists. To circumvent, this issue we provide a very simple proxy server which listens for HTTP connections on `127.0.0.1:80`. Therefore, in order to watch these channels, one should first execute the proxy server using
+Some streaming channels (e.g. *Cielo*, *Sky TG24* and *TV8*) have cookies features that prevent a simple retrieval of the M3U lists. To circumvent this issue, we provide a very simple proxy server which listens for HTTP connections on `127.0.0.1:80`. Therefore, in order to watch these channels, one should first execute the proxy server using
 ```
 sudo python3 proxy3.py
 ```
@@ -23,7 +23,7 @@ or
 ```
 sudo ./proxy3.py
 ```
-For a **Python 2** version of the program (e.g. to run it in a LibreELEC environment), please execute
+For a **Python 2** version of the program (e.g. to run it in a *LibreELEC* environment), please execute
 ```
 sudo python2 proxy2.py
 ```
@@ -31,7 +31,7 @@ or
 ```
 sudo ./proxy2.py
 ```
-Be aware of the fact that these scripts need the [`channels.json`](https://github.com/jurijnota/iptv-italy/blob/main/channels.json) file in the directory where they are placed (and not where they are executed!) to work properly.
+> Be aware of the fact that these scripts need the [`channels.json`](https://github.com/jurijnota/iptv-italy/blob/main/channels.json) file in the directory where they are placed (and not where they are executed) to work properly.
 
 ## Requirements
 No specific requirements are needed to use this M3U playlist, however the following Python modules are mandatory to execute the proxy.
@@ -72,4 +72,4 @@ sudo python2 get-pip.py
 ## Known issues
 This list may not work entirely with [*VLC*](https://www.videolan.org/vlc/) and it has been tested with the add-on [*PVR IPTV Simple Client*](https://kodi.wiki/view/Add-on:PVR_IPTV_Simple_Client) of [*Kodi*](https://kodi.tv/). This issue has partially been solved, however some problems can still arise.
 
-Because of the deployment of [*DRM*](https://it.wikipedia.org/wiki/Digital_rights_management) features, [*La7*](https://www.la7.it/dirette-tv) and [*La7d*](https://www.la7.it/live-la7d) are not available in the list provided. To watch La7 channels with **Kodi**, we recommend [LA7-LA7d Kodi plugin](https://github.com/luivit/plugin.video.rivedila7) that can be found also in the official Kodi 19 repository.
+Because of the deployment of [DRM](https://it.wikipedia.org/wiki/Digital_rights_management) features, [*La7*](https://www.la7.it/dirette-tv) and [*La7d*](https://www.la7.it/live-la7d) are not available in the list provided. To watch *La7* channels with **Kodi**, we recommend [*LA7-LA7d Kodi plugin*](https://github.com/luivit/plugin.video.rivedila7) that can be found also in the official *Kodi 19* repository.
