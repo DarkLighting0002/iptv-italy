@@ -6,7 +6,7 @@ This repository contains a collection of **free** and **legal** italian IPTV cha
 - [*Cielo*](https://www.cielotv.it/streaming.html), [*TV8*](https://tv8.it/streaming.html?zoneid=menu_streaming) and [*Sky TG24*](https://video.sky.it/diretta/tg24) provided by *Sky*
 - [*TG Norba 24*](http://www.norbaonline.it/live.php?diretta=tgnorba)
 
-The list is designed to be as stable as possible and it is compliant with the [*M3U*](https://en.wikipedia.org/wiki/M3U) standard. However, changes in the streaming settings in the websites of the aforementioned companies may prevent the current configuration from working. This list will be maintained to keep up with this possible changes but no guarantee is given in this sense. Together with the M3U list, the Python script used to generate the list is provided.
+The list is designed to be as stable as possible and it is compliant with the [M3U](https://en.wikipedia.org/wiki/M3U) standard. However, changes in the streaming settings in the websites of the aforementioned companies may prevent the current configuration from working. This list will be maintained to keep up with this possible changes but no guarantee is given in this sense. Together with the M3U list, the Python script used to generate the list is provided.
 
 ## Usage
 To install the M3U playlist in the IPTV player, please use the following URL:
