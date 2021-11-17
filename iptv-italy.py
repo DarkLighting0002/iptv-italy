@@ -44,7 +44,7 @@ class Channel:
         self.number = None
         self.logo = None
         self.lines = []
-    
+
     def M3ULines(self):
         """
         Return the lines to write in the M3U file.
@@ -58,7 +58,7 @@ class Channel:
             self.lines.append('tvg-id="{}" '.format(self.id))
         elif self.name is not None:
             self.lines.append('tvg-id="{}" '.format(''.join(c.lower() for c in self.name if not c.isspace())))
-        if self.name is not None:            
+        if self.name is not None:
             self.lines.append('tvg-name="{}" '.format(self.name))
             self.lines.append(', {}'.format(self.name))
         self.lines.append('\n')
@@ -178,7 +178,7 @@ class Mediaset(Channel):
         else:
             self.number = self.CHANNELS[self.name].get('number')
         self.logo = logo + '/{}.png'.format(self.id)
-        self.chUrl = 'https://live3-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel({})/index.m3u8'.format(self.id)
+        self.chUrl = 'https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel({})/index.m3u8'.format(self.id)
 
 
 class Paramount(Channel):
@@ -303,7 +303,7 @@ class La7(Channel):
         else:
             self.number = self.CHANNELS[self.name].get('number')
         self.logo = logo + '/{}.png'.format(self.id)
-        self.chUrl = 'https://d15umi5iaezxgx.cloudfront.net/{}/DRM/HLS/Live.m3u8'.format(self.id)      
+        self.chUrl = 'https://d15umi5iaezxgx.cloudfront.net/{}/DRM/HLS/Live.m3u8'.format(self.id)
 
 
 class M3U:
