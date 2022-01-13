@@ -44,42 +44,6 @@ https://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=747011
 #EXTVLCOPT:http-user-agent=Mozilla/5.0
 #EXTINF: -1 tvg-chno="156" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/rairadio2.png" tvg-id="rairadio2" tvg-name="Rai Radio 2" , Rai Radio 2
 http://mediapolis.rai.it/relinker/relinkerServlet.htm?cont=5674080
-#EXTINF: -1 tvg-chno="4" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/r4.png" tvg-id="r4" tvg-name="Rete 4" , Rete 4
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(r4)/index.m3u8
-#EXTINF: -1 tvg-chno="5" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/c5.png" tvg-id="c5" tvg-name="Canale 5" , Canale 5
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(c5)/index.m3u8
-#EXTINF: -1 tvg-chno="6" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/i1.png" tvg-id="i1" tvg-name="Italia 1" , Italia 1
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(i1)/index.m3u8
-#EXTINF: -1 tvg-chno="20" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/lb.png" tvg-id="lb" tvg-name="20" , 20
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(lb)/index.m3u8
-#EXTINF: -1 tvg-chno="30" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/ka.png" tvg-id="ka" tvg-name="La5" , La5
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(ka)/index.m3u8
-#EXTINF: -1 tvg-chno="66" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/i2.png" tvg-id="i2" tvg-name="Italia 2" , Italia 2
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(i2)/index.m3u8
-#EXTINF: -1 tvg-chno="34" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/b6.png" tvg-id="b6" tvg-name="Cine34" , Cine34
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(b6)/index.m3u8
-#EXTINF: -1 tvg-chno="55" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/kq.png" tvg-id="kq" tvg-name="Mediaset Extra" , Mediaset Extra
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(kq)/index.m3u8
-#EXTINF: -1 tvg-chno="35" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/fu.png" tvg-id="fu" tvg-name="Focus" , Focus
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(fu)/index.m3u8
-#EXTINF: -1 tvg-chno="39" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/lt.png" tvg-id="lt" tvg-name="Top Crime" , Top Crime
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(lt)/index.m3u8
-#EXTINF: -1 tvg-chno="22" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/ki.png" tvg-id="ki" tvg-name="Iris" , Iris
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(ki)/index.m3u8
-#EXTINF: -1 tvg-chno="40" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/kb.png" tvg-id="kb" tvg-name="Boing" , Boing
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(kb)/index.m3u8
-#EXTINF: -1 tvg-chno="46" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/la.png" tvg-id="la" tvg-name="Cartoonito" , Cartoonito
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(la)/index.m3u8
-#EXTINF: -1 tvg-chno="51" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/kf.png" tvg-id="kf" tvg-name="TGcom24" , TGcom24
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(kf)/index.m3u8
-#EXTINF: -1 tvg-chno="157" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/ec.png" tvg-id="ec" tvg-name="Radio 105" , Radio 105
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(ec)/index.m3u8
-#EXTINF: -1 tvg-chno="167" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/er.png" tvg-id="er" tvg-name="Radio 101" , Radio 101
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(er)/index.m3u8
-#EXTINF: -1 tvg-chno="257" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/ew.png" tvg-id="ew" tvg-name="Virgin Radio" , Virgin Radio
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(ew)/index.m3u8
-#EXTINF: -1 tvg-chno="772" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/bb.png" tvg-id="bb" tvg-name="Radio Monte Carlo" , Radio Monte Carlo
-https://live3-radio-mediaset-it.akamaized.net/Content/hls_h0_clr_vos/live/channel(bb)/index.m3u8
 #EXTINF: -1 tvg-chno="50" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/1.png" tvg-id="1" tvg-name="Sky TG24" , Sky TG24
 http://127.0.0.1:10293/?id=1
 #EXTINF: -1 tvg-chno="26" tvg-logo="https://jurijnota.github.io/iptv-italy/logos/2.png" tvg-id="2" tvg-name="Cielo" , Cielo

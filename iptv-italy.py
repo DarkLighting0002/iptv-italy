@@ -350,8 +350,8 @@ if __name__ == '__main__':
         m3u.addChannel(Rai(ch_name))
 
     # Add Mediaset channels
-    for ch_name in Mediaset.CHANNELS.keys():
-        m3u.addChannel(Mediaset(ch_name))
+    #for ch_name in Mediaset.CHANNELS.keys():
+    #    m3u.addChannel(Mediaset(ch_name))
 
     # Add Sky channels
     for ch_name in Sky.CHANNELS.keys():
