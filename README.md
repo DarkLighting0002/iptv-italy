@@ -15,7 +15,7 @@ https://jurijnota.github.io/iptv-italy/iptv-italy.m3u
 ```
 
 ### Advanced Usage
-Some streaming channels (e.g. *Cielo*, *Sky TG24* and *TV8*) have cookies features that prevent a simple retrieval of the M3U lists. To circumvent this issue, we provide a very simple proxy server which listens for HTTP connections on `127.0.0.1:80`. Therefore, in order to watch these channels, one should first execute the proxy server using
+Some streaming channels (e.g. *Cielo*, *Sky TG24* and *TV8*) have cookies features that prevent a simple retrieval of the M3U lists. To circumvent this issue, we provide a very simple proxy server which listens for HTTP connections on `127.0.0.1:10293`. Therefore, in order to watch these channels, one should first execute the proxy server using
 ```
 sudo python3 proxy3.py
 ```
